@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Oct 28 03:24:14 2026
+# Process ID: 16977
+# Current directory: /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.runs/matmul_design_S_AXI_regslice_slr_1_0_0_synth_1
+# Command line: vivado -log matmul_design_S_AXI_regslice_slr_1_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source matmul_design_S_AXI_regslice_slr_1_0_0.tcl -init
+# Log file: /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.runs/matmul_design_S_AXI_regslice_slr_1_0_0_synth_1/matmul_design_S_AXI_regslice_slr_1_0_0.vds
+# Journal file: /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.runs/matmul_design_S_AXI_regslice_slr_1_0_0_synth_1/vivado.jou
+# Running On: crazo, OS: Linux, CPU Frequency: 4399.456 MHz, CPU Physical cores: 6, Host memory: 16700 MB
+#-----------------------------------------------------------
+source vivado.tcl -notrace
+source matmul_design_S_AXI_regslice_slr_1_0_0.tcl -notrace

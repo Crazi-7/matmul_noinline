@@ -1,0 +1,192 @@
+
+
+================================================================
+== Vitis HLS Report for 'matmulFPGA'
+================================================================
+* Date:           Wed Oct 28 03:19:33 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        matmulFPGA
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplusHBM
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.613 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.73>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%msize_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %msize"   --->   Operation 10 'read' 'msize_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%div_cast = partselect i26 @_ssdm_op_PartSelect.i26.i32.i32.i32, i32 %msize_read, i32 6, i32 31"   --->   Operation 11 'partselect' 'div_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%empty = trunc i32 %msize_read"   --->   Operation 12 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%cast = zext i26 %div_cast"   --->   Operation 13 'zext' 'cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (2.73ns)   --->   "%bound = mul i52 %cast, i52 %cast"   --->   Operation 14 'mul' 'bound' <Predicate = true> <Delay = 2.73> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 2.93>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%cast2 = zext i26 %div_cast"   --->   Operation 15 'zext' 'cast2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%cast3 = zext i52 %bound"   --->   Operation 16 'zext' 'cast3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [2/2] (2.93ns)   --->   "%bound4 = mul i78 %cast2, i78 %cast3"   --->   Operation 17 'mul' 'bound4' <Predicate = true> <Delay = 2.93> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 2.93> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 2.93>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%c_val_val_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %c_val_val"   --->   Operation 18 'read' 'c_val_val_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%b_val_val_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %b_val_val"   --->   Operation 19 'read' 'b_val_val_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%a_val_val_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %a_val_val"   --->   Operation 20 'read' 'a_val_val_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [1/2] (2.93ns)   --->   "%bound4 = mul i78 %cast2, i78 %cast3"   --->   Operation 21 'mul' 'bound4' <Predicate = true> <Delay = 2.93> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 2.93> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%axis_word_data = load i64 %p_mcxx_taskId"   --->   Operation 22 'load' 'axis_word_data' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "%wait_ln0 = wait void @_ssdm_op_Wait"   --->   Operation 23 'wait' 'wait_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 24 [2/2] (0.00ns)   --->   "%call_ln0 = call void @matmulFPGA_Pipeline_VITIS_LOOP_74_1_VITIS_LOOP_75_2_VITIS_LOOP_77_3, i78 %bound4, i52 %bound, i26 %div_cast, i26 %empty, i64 %a_val_val_read, i64 %b_val_val_read, i64 %c_val_val_read, i64 %mcxx_outPort_V_data_V, i8 %mcxx_outPort_V_keep_V, i8 %mcxx_outPort_V_strb_V, i1 %mcxx_outPort_V_user_V, i1 %mcxx_outPort_V_last_V, i1 %mcxx_outPort_V_id_V, i2 %mcxx_outPort_V_dest_V, i64 %axis_word_data"   --->   Operation 24 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 2.14>
+ST_5 : Operation 25 [1/2] (2.14ns)   --->   "%call_ln0 = call void @matmulFPGA_Pipeline_VITIS_LOOP_74_1_VITIS_LOOP_75_2_VITIS_LOOP_77_3, i78 %bound4, i52 %bound, i26 %div_cast, i26 %empty, i64 %a_val_val_read, i64 %b_val_val_read, i64 %c_val_val_read, i64 %mcxx_outPort_V_data_V, i8 %mcxx_outPort_V_keep_V, i8 %mcxx_outPort_V_strb_V, i1 %mcxx_outPort_V_user_V, i1 %mcxx_outPort_V_last_V, i1 %mcxx_outPort_V_id_V, i2 %mcxx_outPort_V_dest_V, i64 %axis_word_data"   --->   Operation 25 'call' 'call_ln0' <Predicate = true> <Delay = 2.14> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 26 [1/1] (0.00ns)   --->   "%wait_ln0 = wait void @_ssdm_op_Wait"   --->   Operation 26 'wait' 'wait_ln0' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 1.00>
+ST_7 : Operation 27 [1/1] (0.00ns)   --->   "%wait_ln232 = wait void @_ssdm_op_Wait, i32 1" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:232->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:122]   --->   Operation 27 'wait' 'wait_ln232' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 28 [1/1] (1.00ns)   --->   "%write_ln130 = write void @_ssdm_op_Write.axis.volatile.i64P0A.i8P0A.i8P0A.i1P0A.i1P0A.i1P0A.i2P0A, i64 %mcxx_outPort_V_data_V, i8 %mcxx_outPort_V_keep_V, i8 %mcxx_outPort_V_strb_V, i1 %mcxx_outPort_V_user_V, i1 %mcxx_outPort_V_last_V, i1 %mcxx_outPort_V_id_V, i2 %mcxx_outPort_V_dest_V, i64 %axis_word_data, i8 0, i8 0, i1 0, i1 1, i1 0, i2 3" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:130->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:233->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:122]   --->   Operation 28 'write' 'write_ln130' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 8 <SV = 7> <Delay = 1.00>
+ST_8 : Operation 29 [1/1] (0.00ns)   --->   "%wait_ln234 = wait void @_ssdm_op_Wait, i32 1" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:234->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:122]   --->   Operation 29 'wait' 'wait_ln234' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 30 [1/1] (1.00ns)   --->   "%p_0 = read i8 @_ssdm_op_Read.axis.volatile.i8P128A, i8 %mcxx_spawnInPort" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:235->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:122]   --->   Operation 30 'read' 'p_0' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 31 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i64 %mcxx_outPort_V_data_V, i8 %mcxx_outPort_V_keep_V, i8 %mcxx_outPort_V_strb_V, i1 %mcxx_outPort_V_user_V, i1 %mcxx_outPort_V_last_V, i1 %mcxx_outPort_V_id_V, i2 %mcxx_outPort_V_dest_V, void @empty_7"   --->   Operation 31 'specaxissidechannel' 'specaxissidechannel_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %mcxx_spawnInPort, void @empty_1, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %mcxx_outPort_V_dest_V, i1 %mcxx_outPort_V_id_V, i1 %mcxx_outPort_V_last_V, i1 %mcxx_outPort_V_user_V, i8 %mcxx_outPort_V_strb_V, i8 %mcxx_outPort_V_keep_V, i64 %mcxx_outPort_V_data_V, void @empty_1, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 34 [1/1] (0.00ns)   --->   "%wait_ln236 = wait void @_ssdm_op_Wait, i32 1" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:236->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:122]   --->   Operation 34 'wait' 'wait_ln236' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 35 [1/1] (0.00ns)   --->   "%ret_ln123 = ret" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:123]   --->   Operation 35 'ret' 'ret_ln123' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 2.733ns
+The critical path consists of the following:
+	wire read operation ('msize_read') on port 'msize' [17]  (0.000 ns)
+	'mul' operation 52 bit ('bound') [25]  (2.733 ns)
+
+ <State 2>: 2.931ns
+The critical path consists of the following:
+	'mul' operation 78 bit ('bound4') [28]  (2.931 ns)
+
+ <State 3>: 2.931ns
+The critical path consists of the following:
+	'mul' operation 78 bit ('bound4') [28]  (2.931 ns)
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+ <State 5>: 2.147ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln0') to 'matmulFPGA_Pipeline_VITIS_LOOP_74_1_VITIS_LOOP_75_2_VITIS_LOOP_77_3' [30]  (2.147 ns)
+
+ <State 6>: 0.000ns
+The critical path consists of the following:
+
+ <State 7>: 1.000ns
+The critical path consists of the following:
+	axis write operation ('write_ln130', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:130->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:233->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:122) on port 'mcxx_outPort_V_data_V' (matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:130->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:233->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:122) [33]  (1.000 ns)
+
+ <State 8>: 1.000ns
+The critical path consists of the following:
+	axis read operation ('p_0', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:235->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:122) on port 'mcxx_spawnInPort' (matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:235->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:122) [35]  (1.000 ns)
+
+ <State 9>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

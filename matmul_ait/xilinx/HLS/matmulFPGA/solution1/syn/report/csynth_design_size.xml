@@ -1,0 +1,63 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">, 3469, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll,   408, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,   267, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,   267, user inline pragmas are applied</column>
+            <column name="">(4) simplification,   267, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition,   275, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,   275, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate ,   275, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,   275, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,   603, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification,   582, loop and instruction simplification</column>
+            <column name="">(2) parallelization,   694, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,   520, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,   520, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering,   409, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,   380, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="matmulFPGA_wrapper" col1="matmulFPGA_hls_automatic_clang.cpp:132" col2="3469" col3="267" col4="603" col5="520" col6="380">
+                    <row id="2" col0="__mcxx_ptr_t" col1="matmulFPGA_hls_automatic_clang.cpp:46" col2="3" col2_disp="   3 (3 calls)" col3="" col4="" col5="" col6=""/>
+                    <row id="3" col0="__mcxx_cast" col1="matmulFPGA_hls_automatic_clang.cpp:24" col2="1" col3="" col4="" col5="" col6=""/>
+                    <row id="7" col0="matmulFPGA" col1="matmulFPGA_hls_automatic_clang.cpp:72" col2="2630" col3="200" col4="450" col5="392" col6="263">
+                        <row id="2" col0="__mcxx_ptr_t" col1="matmulFPGA_hls_automatic_clang.cpp:46" col2="6" col2_disp="   6 (6 calls)" col3="" col4="" col5="" col6=""/>
+                        <row id="4" col0="operator+&lt;unsigned int&gt;" col1="matmulFPGA_hls_automatic_clang.cpp:51" col2="84" col2_disp="  84 (6 calls)" col3="" col4="" col5="" col6="">
+                            <row id="5" col0="__mcxx_ptr_t" col1="matmulFPGA_hls_automatic_clang.cpp:45" col2="30" col2_disp="  30 (6 calls)" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="6" col0="mcxx_task_create" col1="matmulFPGA_hls_automatic_clang.cpp:203" col2="2087" col3="" col4="" col5="" col6="">
+                            <row id="1" col0="mcxx_write_out_port" col1="matmulFPGA_hls_automatic_clang.cpp:124" col2="518" col2_disp=" 518 (7 calls)" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="8" col0="mcxx_taskwait" col1="matmulFPGA_hls_automatic_clang.cpp:230" col2="132" col3="" col4="" col5="" col6="">
+                            <row id="1" col0="mcxx_write_out_port" col1="matmulFPGA_hls_automatic_clang.cpp:124" col2="74" col3="" col4="" col5="" col6=""/>
+                        </row>
+                    </row>
+                    <row id="1" col0="mcxx_write_out_port" col1="matmulFPGA_hls_automatic_clang.cpp:124" col2="222" col2_disp=" 222 (3 calls)" col3="" col4="" col5="" col6=""/>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

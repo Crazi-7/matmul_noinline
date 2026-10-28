@@ -1,0 +1,35 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1",
+    "file": "matmulFPGA_hls_automatic_clang.cpp",
+    "fileloc": 132,
+    "instructions": 121,
+    "loads": {
+      "G": 3,
+      "L": 2
+    },
+    "name": "matmulFPGA_wrapper",
+    "stores": {
+      "G": 1,
+      "L": 26
+    },
+    "total_instructions": 603
+  },
+  "1": {
+    "basicblocks": 15,
+    "calls": "",
+    "file": "matmulFPGA_hls_automatic_clang.cpp",
+    "fileloc": 72,
+    "instructions": 358,
+    "loads": {
+      "G": 14,
+      "L": 15
+    },
+    "name": "matmulFPGA",
+    "stores": {
+      "L": 74
+    },
+    "total_instructions": 450
+  }
+}

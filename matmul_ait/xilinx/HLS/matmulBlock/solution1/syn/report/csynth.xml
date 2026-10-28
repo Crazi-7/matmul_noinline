@@ -1,0 +1,1616 @@
+<profile>
+    <ReportVersion>
+        <Version>2023.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplusHBM</ProductFamily>
+        <Part>xcu280-fsvh2892-2L-e</Part>
+        <TopModelName>matmulBlock_wrapper</TopModelName>
+        <TargetClockPeriod>5.00</TargetClockPeriod>
+        <ClockUncertainty>1.35</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>8222</Best-caseLatency>
+            <Average-caseLatency>10293</Average-caseLatency>
+            <Worst-caseLatency>12362</Worst-caseLatency>
+            <Best-caseRealTimeLatency>41.110 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>51.465 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>61.810 us</Worst-caseRealTimeLatency>
+            <Interval-min>8223</Interval-min>
+            <Interval-max>12363</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfViolations>
+            <IssueType>-</IssueType>
+            <ViolationType>-</ViolationType>
+            <SourceLocation>matmulBlock/matmulBlock_hls_automatic_clang.cpp:56</SourceLocation>
+        </SummaryOfViolations>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>32</BRAM_18K>
+            <DSP>160</DSP>
+            <FF>25459</FF>
+            <LUT>22348</LUT>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>4032</BRAM_18K>
+            <DSP>9024</DSP>
+            <FF>2607360</FF>
+            <LUT>1303680</LUT>
+            <URAM>960</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>matmulBlock_wrapper</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>matmulBlock_wrapper</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>mcxx_inPort_TDATA</name>
+            <Object>mcxx_inPort</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>mcxx_inPort_TVALID</name>
+            <Object>mcxx_inPort</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>mcxx_inPort_TREADY</name>
+            <Object>mcxx_inPort</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>mcxx_outPort_TDATA</name>
+            <Object>mcxx_outPort_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>mcxx_outPort_TVALID</name>
+            <Object>mcxx_outPort_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>mcxx_outPort_TREADY</name>
+            <Object>mcxx_outPort_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>mcxx_outPort_TDEST</name>
+            <Object>mcxx_outPort_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>mcxx_outPort_TKEEP</name>
+            <Object>mcxx_outPort_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>mcxx_outPort_TSTRB</name>
+            <Object>mcxx_outPort_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>mcxx_outPort_TUSER</name>
+            <Object>mcxx_outPort_V_user_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>mcxx_outPort_TLAST</name>
+            <Object>mcxx_outPort_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>mcxx_outPort_TID</name>
+            <Object>mcxx_outPort_V_id_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_AWVALID</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_AWREADY</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_AWADDR</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_AWID</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_AWLEN</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_AWSIZE</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>3</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_AWBURST</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_AWLOCK</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_AWCACHE</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_AWPROT</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>3</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_AWQOS</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_AWREGION</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_AWUSER</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_WVALID</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_WREADY</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_WDATA</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>128</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_WSTRB</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_WLAST</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_WID</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_WUSER</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_ARVALID</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_ARREADY</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_ARADDR</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_ARID</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_ARLEN</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_ARSIZE</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>3</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_ARBURST</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_ARLOCK</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_ARCACHE</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_ARPROT</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>3</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_ARQOS</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_ARREGION</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_ARUSER</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_RVALID</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_RREADY</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_RDATA</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>128</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_RLAST</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_RID</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_RUSER</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_RRESP</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_BVALID</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_BREADY</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_BRESP</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_BID</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_mcxx_memport_BUSER</name>
+            <Object>mcxx_memport</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="3">
+            <ModuleName>matmulBlock_wrapper</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_matmulBlock_wrapper_Pipeline_VITIS_LOOP_95_1_fu_278</InstName>
+                    <ModuleName>matmulBlock_wrapper_Pipeline_VITIS_LOOP_95_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>278</ID>
+                    <BindInstances>add_ln95_fu_147_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_matmulBlock_wrapper_Pipeline_VITIS_LOOP_107_3_fu_289</InstName>
+                    <ModuleName>matmulBlock_wrapper_Pipeline_VITIS_LOOP_107_3</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>289</ID>
+                    <BindInstances>add_ln107_fu_345_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_matmulBlock_wrapper_Pipeline_VITIS_LOOP_119_5_fu_328</InstName>
+                    <ModuleName>matmulBlock_wrapper_Pipeline_VITIS_LOOP_119_5</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>328</ID>
+                    <BindInstances>add_ln119_fu_593_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_matmulBlock_fu_399</InstName>
+                    <ModuleName>matmulBlock</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>399</ID>
+                    <BindInstances>add_ln39_fu_1986_p2 add_ln39_1_fu_2012_p2 fmul_32ns_32ns_32_4_max_dsp_1_U89 fadd_32ns_32ns_32_5_full_dsp_1_U57 fmul_32ns_32ns_32_4_max_dsp_1_U90 fmul_32ns_32ns_32_4_max_dsp_1_U91 fmul_32ns_32ns_32_4_max_dsp_1_U92 fmul_32ns_32ns_32_4_max_dsp_1_U93 fmul_32ns_32ns_32_4_max_dsp_1_U94 fmul_32ns_32ns_32_4_max_dsp_1_U95 fmul_32ns_32ns_32_4_max_dsp_1_U96 fmul_32ns_32ns_32_4_max_dsp_1_U97 fmul_32ns_32ns_32_4_max_dsp_1_U98 fmul_32ns_32ns_32_4_max_dsp_1_U99 fmul_32ns_32ns_32_4_max_dsp_1_U100 fmul_32ns_32ns_32_4_max_dsp_1_U101 fmul_32ns_32ns_32_4_max_dsp_1_U102 fmul_32ns_32ns_32_4_max_dsp_1_U103 fmul_32ns_32ns_32_4_max_dsp_1_U104 fmul_32ns_32ns_32_4_max_dsp_1_U105 fmul_32ns_32ns_32_4_max_dsp_1_U106 fmul_32ns_32ns_32_4_max_dsp_1_U107 fmul_32ns_32ns_32_4_max_dsp_1_U108 fmul_32ns_32ns_32_4_max_dsp_1_U109 fmul_32ns_32ns_32_4_max_dsp_1_U110 fmul_32ns_32ns_32_4_max_dsp_1_U111 fmul_32ns_32ns_32_4_max_dsp_1_U112 fmul_32ns_32ns_32_4_max_dsp_1_U113 fmul_32ns_32ns_32_4_max_dsp_1_U114 fmul_32ns_32ns_32_4_max_dsp_1_U115 fmul_32ns_32ns_32_4_max_dsp_1_U116 fmul_32ns_32ns_32_4_max_dsp_1_U117 fmul_32ns_32ns_32_4_max_dsp_1_U118 fmul_32ns_32ns_32_4_max_dsp_1_U119 fmul_32ns_32ns_32_4_max_dsp_1_U120 fmul_32ns_32ns_32_4_max_dsp_1_U89 fmul_32ns_32ns_32_4_max_dsp_1_U90 fmul_32ns_32ns_32_4_max_dsp_1_U91 fmul_32ns_32ns_32_4_max_dsp_1_U92 fmul_32ns_32ns_32_4_max_dsp_1_U93 fmul_32ns_32ns_32_4_max_dsp_1_U94 fmul_32ns_32ns_32_4_max_dsp_1_U95 fmul_32ns_32ns_32_4_max_dsp_1_U96 fmul_32ns_32ns_32_4_max_dsp_1_U97 fmul_32ns_32ns_32_4_max_dsp_1_U98 fmul_32ns_32ns_32_4_max_dsp_1_U99 fmul_32ns_32ns_32_4_max_dsp_1_U100 fmul_32ns_32ns_32_4_max_dsp_1_U101 fmul_32ns_32ns_32_4_max_dsp_1_U102 fmul_32ns_32ns_32_4_max_dsp_1_U103 fmul_32ns_32ns_32_4_max_dsp_1_U104 fmul_32ns_32ns_32_4_max_dsp_1_U105 fmul_32ns_32ns_32_4_max_dsp_1_U106 fmul_32ns_32ns_32_4_max_dsp_1_U107 fmul_32ns_32ns_32_4_max_dsp_1_U108 fmul_32ns_32ns_32_4_max_dsp_1_U109 fmul_32ns_32ns_32_4_max_dsp_1_U110 fmul_32ns_32ns_32_4_max_dsp_1_U111 fmul_32ns_32ns_32_4_max_dsp_1_U112 fmul_32ns_32ns_32_4_max_dsp_1_U113 fmul_32ns_32ns_32_4_max_dsp_1_U114 fmul_32ns_32ns_32_4_max_dsp_1_U115 fmul_32ns_32ns_32_4_max_dsp_1_U116 fmul_32ns_32ns_32_4_max_dsp_1_U117 fmul_32ns_32ns_32_4_max_dsp_1_U118 fmul_32ns_32ns_32_4_max_dsp_1_U119 fmul_32ns_32ns_32_4_max_dsp_1_U120 fadd_32ns_32ns_32_5_full_dsp_1_U58 fadd_32ns_32ns_32_5_full_dsp_1_U59 fadd_32ns_32ns_32_5_full_dsp_1_U60 fadd_32ns_32ns_32_5_full_dsp_1_U61 fadd_32ns_32ns_32_5_full_dsp_1_U62 fadd_32ns_32ns_32_5_full_dsp_1_U63 fadd_32ns_32ns_32_5_full_dsp_1_U64 fadd_32ns_32ns_32_5_full_dsp_1_U65 fadd_32ns_32ns_32_5_full_dsp_1_U66 fadd_32ns_32ns_32_5_full_dsp_1_U67 fadd_32ns_32ns_32_5_full_dsp_1_U68 fadd_32ns_32ns_32_5_full_dsp_1_U69 fadd_32ns_32ns_32_5_full_dsp_1_U70 fadd_32ns_32ns_32_5_full_dsp_1_U71 fadd_32ns_32ns_32_5_full_dsp_1_U72 fadd_32ns_32ns_32_5_full_dsp_1_U73 fadd_32ns_32ns_32_5_full_dsp_1_U74 fadd_32ns_32ns_32_5_full_dsp_1_U75 fadd_32ns_32ns_32_5_full_dsp_1_U76 fadd_32ns_32ns_32_5_full_dsp_1_U77 fadd_32ns_32ns_32_5_full_dsp_1_U78 fadd_32ns_32ns_32_5_full_dsp_1_U79 fadd_32ns_32ns_32_5_full_dsp_1_U80 fadd_32ns_32ns_32_5_full_dsp_1_U81 fadd_32ns_32ns_32_5_full_dsp_1_U82 fadd_32ns_32ns_32_5_full_dsp_1_U83 fadd_32ns_32ns_32_5_full_dsp_1_U84 fadd_32ns_32ns_32_5_full_dsp_1_U85 fadd_32ns_32ns_32_5_full_dsp_1_U86 fadd_32ns_32ns_32_5_full_dsp_1_U87 fadd_32ns_32ns_32_5_full_dsp_1_U88 fadd_32ns_32ns_32_5_full_dsp_1_U57 fadd_32ns_32ns_32_5_full_dsp_1_U58 fadd_32ns_32ns_32_5_full_dsp_1_U59 fadd_32ns_32ns_32_5_full_dsp_1_U60 fadd_32ns_32ns_32_5_full_dsp_1_U61 fadd_32ns_32ns_32_5_full_dsp_1_U62 fadd_32ns_32ns_32_5_full_dsp_1_U63 fadd_32ns_32ns_32_5_full_dsp_1_U64 fadd_32ns_32ns_32_5_full_dsp_1_U65 fadd_32ns_32ns_32_5_full_dsp_1_U66 fadd_32ns_32ns_32_5_full_dsp_1_U67 fadd_32ns_32ns_32_5_full_dsp_1_U68 fadd_32ns_32ns_32_5_full_dsp_1_U69 fadd_32ns_32ns_32_5_full_dsp_1_U70 fadd_32ns_32ns_32_5_full_dsp_1_U71 fadd_32ns_32ns_32_5_full_dsp_1_U72 fadd_32ns_32ns_32_5_full_dsp_1_U73 fadd_32ns_32ns_32_5_full_dsp_1_U74 fadd_32ns_32ns_32_5_full_dsp_1_U75 fadd_32ns_32ns_32_5_full_dsp_1_U76 fadd_32ns_32ns_32_5_full_dsp_1_U77 fadd_32ns_32ns_32_5_full_dsp_1_U78 fadd_32ns_32ns_32_5_full_dsp_1_U79 fadd_32ns_32ns_32_5_full_dsp_1_U80 fadd_32ns_32ns_32_5_full_dsp_1_U81 fadd_32ns_32ns_32_5_full_dsp_1_U82 fadd_32ns_32ns_32_5_full_dsp_1_U83 fadd_32ns_32ns_32_5_full_dsp_1_U84 fadd_32ns_32ns_32_5_full_dsp_1_U85 fadd_32ns_32ns_32_5_full_dsp_1_U86 fadd_32ns_32ns_32_5_full_dsp_1_U87 fadd_32ns_32ns_32_5_full_dsp_1_U88 add_ln40_fu_2116_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_matmulBlock_wrapper_Pipeline_VITIS_LOOP_132_7_fu_503</InstName>
+                    <ModuleName>matmulBlock_wrapper_Pipeline_VITIS_LOOP_132_7</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>503</ID>
+                    <BindInstances>add_ln132_fu_592_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_a_1_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_a_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_9_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_7_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_6_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_5_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_4_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_3_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_2_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_1_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_8_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_27_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_26_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_25_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_24_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_23_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_22_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_9_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_8_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_7_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_6_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_5_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_4_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_3_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_2_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_1_U matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_21_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_20_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_19_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_18_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_17_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_16_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_15_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_14_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_13_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_12_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_11_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_10_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_9_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_8_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_7_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_6_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_5_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_4_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_3_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_2_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_1_U p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_U mcxx_memport_m_axi_U</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>matmulBlock_wrapper_Pipeline_VITIS_LOOP_95_1</Name>
+            <Loops>
+                <VITIS_LOOP_95_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>5.00</TargetClockPeriod>
+                    <ClockUncertainty>1.35</ClockUncertainty>
+                    <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>1027</Best-caseLatency>
+                    <Average-caseLatency>1027</Average-caseLatency>
+                    <Worst-caseLatency>1027</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.135 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.135 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.135 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1027</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_95_1>
+                        <Name>VITIS_LOOP_95_1</Name>
+                        <Slack>3.65</Slack>
+                        <TripCount>1024</TripCount>
+                        <Latency>1025</Latency>
+                        <AbsoluteTimeLatency>5.125 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_95_1>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>matmulBlock/matmulBlock_hls_automatic_clang.cpp:95</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_95_1>
+                            <Name>VITIS_LOOP_95_1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>matmulBlock/matmulBlock_hls_automatic_clang.cpp:101</SourceLocation>
+                        </VITIS_LOOP_95_1>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>166</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>97</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_95_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln95_fu_147_p2" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln95"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>matmulBlock_wrapper_Pipeline_VITIS_LOOP_107_3</Name>
+            <Loops>
+                <VITIS_LOOP_107_3/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>5.00</TargetClockPeriod>
+                    <ClockUncertainty>1.35</ClockUncertainty>
+                    <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>1027</Best-caseLatency>
+                    <Average-caseLatency>1027</Average-caseLatency>
+                    <Worst-caseLatency>1027</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.135 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.135 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.135 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1027</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_107_3>
+                        <Name>VITIS_LOOP_107_3</Name>
+                        <Slack>3.65</Slack>
+                        <TripCount>1024</TripCount>
+                        <Latency>1025</Latency>
+                        <AbsoluteTimeLatency>5.125 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_107_3>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>matmulBlock/matmulBlock_hls_automatic_clang.cpp:107</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_107_3>
+                            <Name>VITIS_LOOP_107_3</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>matmulBlock/matmulBlock_hls_automatic_clang.cpp:107</SourceLocation>
+                        </VITIS_LOOP_107_3>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>164</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>86</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_107_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln107_fu_345_p2" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:107" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln107"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>matmulBlock_wrapper_Pipeline_VITIS_LOOP_119_5</Name>
+            <Loops>
+                <VITIS_LOOP_119_5/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>5.00</TargetClockPeriod>
+                    <ClockUncertainty>1.35</ClockUncertainty>
+                    <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>1027</Best-caseLatency>
+                    <Average-caseLatency>1027</Average-caseLatency>
+                    <Worst-caseLatency>1027</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.135 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.135 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.135 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1027</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_119_5>
+                        <Name>VITIS_LOOP_119_5</Name>
+                        <Slack>3.65</Slack>
+                        <TripCount>1024</TripCount>
+                        <Latency>1025</Latency>
+                        <AbsoluteTimeLatency>5.125 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_119_5>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>matmulBlock/matmulBlock_hls_automatic_clang.cpp:119</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_119_5>
+                            <Name>VITIS_LOOP_119_5</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>matmulBlock/matmulBlock_hls_automatic_clang.cpp:119</SourceLocation>
+                        </VITIS_LOOP_119_5>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>164</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>86</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_119_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_fu_593_p2" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:119" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln119"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>matmulBlock</Name>
+            <Loops>
+                <VITIS_LOOP_39_1_VITIS_LOOP_40_2/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>5.00</TargetClockPeriod>
+                    <ClockUncertainty>1.35</ClockUncertainty>
+                    <EstimatedClockPeriod>3.576</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>8203</Best-caseLatency>
+                    <Average-caseLatency>8203</Average-caseLatency>
+                    <Worst-caseLatency>8203</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>41.015 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>41.015 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>41.015 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>8203</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_39_1_VITIS_LOOP_40_2>
+                        <Name>VITIS_LOOP_39_1_VITIS_LOOP_40_2</Name>
+                        <Slack>3.65</Slack>
+                        <TripCount>4096</TripCount>
+                        <Latency>8201</Latency>
+                        <AbsoluteTimeLatency>41.005 us</AbsoluteTimeLatency>
+                        <PipelineII>2</PipelineII>
+                        <PipelineDepth>12</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_39_1_VITIS_LOOP_40_2>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>matmulBlock/matmulBlock_hls_automatic_clang.cpp:40</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_39_1_VITIS_LOOP_40_2>
+                            <Name>VITIS_LOOP_39_1_VITIS_LOOP_40_2</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>matmulBlock/matmulBlock_hls_automatic_clang.cpp:39</SourceLocation>
+                        </VITIS_LOOP_39_1_VITIS_LOOP_40_2>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>160</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>21860</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>14530</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln39_fu_1986_p2" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:39" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln39"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln39_1_fu_2012_p2" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:39" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln39_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U89" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U57" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U90" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U91" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U92" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U93" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U94" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U95" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U96" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U97" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U98" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U99" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_s"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U100" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U101" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U102" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U103" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U104" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U105" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U106" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U107" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_17"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U108" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_18"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U109" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U110" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_20"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U111" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_21"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U112" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U113" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U114" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U115" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_25"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U116" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U117" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_27"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U118" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U119" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U120" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U89" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_31"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U90" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_32"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U91" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U92" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U93" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_35"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U94" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_36"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U95" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U96" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_38"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U97" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_39"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U98" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_40"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U99" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_41"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U100" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_42"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U101" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U102" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_44"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U103" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_45"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U104" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_46"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U105" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_47"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U106" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_48"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U107" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_49"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U108" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_50"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U109" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_51"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U110" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_52"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U111" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_53"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U112" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_54"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U113" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_55"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U114" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_56"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U115" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_57"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U116" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_58"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U117" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_59"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U118" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_60"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U119" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_61"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U120" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="mul13_62"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U58" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U59" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U60" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U61" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U62" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U63" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U64" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U65" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U66" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U67" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_s"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U68" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U69" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U70" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U71" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U72" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U73" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U74" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U75" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_17"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U76" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_18"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U77" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U78" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_20"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U79" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_21"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U80" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U81" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U82" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U83" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_25"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U84" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U85" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_27"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U86" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U87" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U88" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U57" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_31"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U58" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_32"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U59" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U60" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U61" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_35"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U62" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_36"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U63" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U64" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_38"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U65" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_39"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U66" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_40"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U67" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_41"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U68" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_42"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U69" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U70" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_44"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U71" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_45"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U72" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_46"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U73" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_47"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U74" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_48"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U75" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_49"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U76" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_50"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U77" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_51"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U78" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_52"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U79" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_53"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U80" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_54"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U81" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_55"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U82" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_56"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U83" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_57"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U84" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_58"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U85" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_59"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U86" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_60"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U87" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_61"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U88" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:43" STORAGESUBTYPE="" URAM="0" VARIABLE="add18_62"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_39_1_VITIS_LOOP_40_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln40_fu_2116_p2" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:40" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln40"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>matmulBlock_wrapper_Pipeline_VITIS_LOOP_132_7</Name>
+            <Loops>
+                <VITIS_LOOP_132_7/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>5.00</TargetClockPeriod>
+                    <ClockUncertainty>1.35</ClockUncertainty>
+                    <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>1027</Best-caseLatency>
+                    <Average-caseLatency>1027</Average-caseLatency>
+                    <Worst-caseLatency>1027</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.135 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.135 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.135 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1027</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_132_7>
+                        <Name>VITIS_LOOP_132_7</Name>
+                        <Slack>3.65</Slack>
+                        <TripCount>1024</TripCount>
+                        <Latency>1025</Latency>
+                        <AbsoluteTimeLatency>5.125 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_132_7>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>matmulBlock/matmulBlock_hls_automatic_clang.cpp:132</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_132_7>
+                            <Name>VITIS_LOOP_132_7</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>matmulBlock/matmulBlock_hls_automatic_clang.cpp:132</SourceLocation>
+                        </VITIS_LOOP_132_7>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>147</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>258</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_132_7" OPTYPE="add" PRAGMA="" RTLNAME="add_ln132_fu_592_p2" SOURCE="matmulBlock/matmulBlock_hls_automatic_clang.cpp:132" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln132"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>matmulBlock_wrapper</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>5.00</TargetClockPeriod>
+                    <ClockUncertainty>1.35</ClockUncertainty>
+                    <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>8222</Best-caseLatency>
+                    <Average-caseLatency>10293</Average-caseLatency>
+                    <Worst-caseLatency>12362</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>41.110 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>51.465 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>61.810 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>8223 ~ 12363</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>matmulBlock/matmulBlock_hls_automatic_clang.cpp:56</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>32</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <DSP>160</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>25459</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>22348</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_a_1_U" SOURCE="" STORAGESIZE="32 2048 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_a_1"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_a_U" SOURCE="" STORAGESIZE="32 2048 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_a"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_9_U" SOURCE="" STORAGESIZE="32 256 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_9"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_7_U" SOURCE="" STORAGESIZE="32 256 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_7"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_6_U" SOURCE="" STORAGESIZE="32 256 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_6"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_5_U" SOURCE="" STORAGESIZE="32 256 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_5"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_4_U" SOURCE="" STORAGESIZE="32 256 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_4"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_3_U" SOURCE="" STORAGESIZE="32 256 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_3"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_2_U" SOURCE="" STORAGESIZE="32 256 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_2"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_1_U" SOURCE="" STORAGESIZE="32 256 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_1"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_U" SOURCE="" STORAGESIZE="32 256 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_8_U" SOURCE="" STORAGESIZE="32 256 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_8"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_27_U" SOURCE="" STORAGESIZE="32 256 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_27"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_26_U" SOURCE="" STORAGESIZE="32 256 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_26"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_25_U" SOURCE="" STORAGESIZE="32 256 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_25"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_24_U" SOURCE="" STORAGESIZE="32 256 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_24"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_23_U" SOURCE="" STORAGESIZE="32 256 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_23"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_22_U" SOURCE="" STORAGESIZE="32 256 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_s2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_22"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_9_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_9"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_8_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_8"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_7_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_7"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_6_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_6"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_5_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_5"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_4_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_4"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_3_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_3"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_2_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_2"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_1_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_1"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_21_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_21"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_20_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_20"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_19_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_19"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_18_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_18"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_17_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_17"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_16_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_16"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_15_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_15"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_14_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_14"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_13_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_13"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_12_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_12"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_11_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_11"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_10_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_10"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_9_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_9"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_8_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_8"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_7_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_7"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_6_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_6"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_5_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_5"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_4_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_4"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_3_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_3"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_2_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_2"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_1_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_1"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1"/>
+                <BindNode BINDTYPE="adapter" BRAM="8" BUNDLEDNAME="mcxx_memport" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="mcxx_memport_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_interface default_slave_interface="none" m_axi_offset="off"/>
+        <config_rtl reset_async="1" reset_level="low"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="mcxx_inPort" index="0" direction="in" srcType="stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;" srcSize="64">
+            <hwRefs>
+                <hwRef type="interface" interface="mcxx_inPort" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="mcxx_outPort" index="1" direction="out" srcType="stream&lt;hls::axis&lt;ap_uint&lt;64&gt;, 1, 1, 2, '8', false&gt;, 0&gt;&amp;" srcSize="128">
+            <hwRefs>
+                <hwRef type="interface" interface="mcxx_outPort" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="mcxx_memport" index="2" direction="inout" srcType="ap_uint&lt;128&gt;*" srcSize="128">
+            <hwRefs>
+                <hwRef type="interface" interface="m_axi_mcxx_memport" name="" usage="data" direction="inout"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">mcxx_inPort:mcxx_outPort:m_axi_mcxx_memport</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="mcxx_inPort" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="64" portPrefix="mcxx_inPort_">
+            <ports>
+                <port>mcxx_inPort_TDATA</port>
+                <port>mcxx_inPort_TREADY</port>
+                <port>mcxx_inPort_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="mcxx_inPort"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="mcxx_outPort" type="axi4stream" busTypeName="axis" mode="master" dataWidth="64" portPrefix="mcxx_outPort_">
+            <ports>
+                <port>mcxx_outPort_TDATA</port>
+                <port>mcxx_outPort_TDEST</port>
+                <port>mcxx_outPort_TID</port>
+                <port>mcxx_outPort_TKEEP</port>
+                <port>mcxx_outPort_TLAST</port>
+                <port>mcxx_outPort_TREADY</port>
+                <port>mcxx_outPort_TSTRB</port>
+                <port>mcxx_outPort_TUSER</port>
+                <port>mcxx_outPort_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="mcxx_outPort"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="m_axi_mcxx_memport" type="axi4full" busTypeName="aximm" mode="master" dataWidth="128" addrWidth="64" portPrefix="m_axi_mcxx_memport_" paramPrefix="C_M_AXI_MCXX_MEMPORT_" preferredUsageValue="MEMORY">
+            <busParams>
+                <busParam busParamName="NUM_READ_OUTSTANDING">16</busParam>
+                <busParam busParamName="NUM_WRITE_OUTSTANDING">16</busParam>
+                <busParam busParamName="MAX_READ_BURST_LENGTH">16</busParam>
+                <busParam busParamName="MAX_WRITE_BURST_LENGTH">16</busParam>
+                <busParam busParamName="MAX_BURST_LENGTH">256</busParam>
+                <busParam busParamName="PROTOCOL">AXI4</busParam>
+                <busParam busParamName="READ_WRITE_MODE">READ_WRITE</busParam>
+                <busParam busParamName="HAS_BURST">0</busParam>
+                <busParam busParamName="SUPPORTS_NARROW_BURST">0</busParam>
+            </busParams>
+            <ports>
+                <port>m_axi_mcxx_memport_ARADDR</port>
+                <port>m_axi_mcxx_memport_ARBURST</port>
+                <port>m_axi_mcxx_memport_ARCACHE</port>
+                <port>m_axi_mcxx_memport_ARID</port>
+                <port>m_axi_mcxx_memport_ARLEN</port>
+                <port>m_axi_mcxx_memport_ARLOCK</port>
+                <port>m_axi_mcxx_memport_ARPROT</port>
+                <port>m_axi_mcxx_memport_ARQOS</port>
+                <port>m_axi_mcxx_memport_ARREADY</port>
+                <port>m_axi_mcxx_memport_ARREGION</port>
+                <port>m_axi_mcxx_memport_ARSIZE</port>
+                <port>m_axi_mcxx_memport_ARUSER</port>
+                <port>m_axi_mcxx_memport_ARVALID</port>
+                <port>m_axi_mcxx_memport_AWADDR</port>
+                <port>m_axi_mcxx_memport_AWBURST</port>
+                <port>m_axi_mcxx_memport_AWCACHE</port>
+                <port>m_axi_mcxx_memport_AWID</port>
+                <port>m_axi_mcxx_memport_AWLEN</port>
+                <port>m_axi_mcxx_memport_AWLOCK</port>
+                <port>m_axi_mcxx_memport_AWPROT</port>
+                <port>m_axi_mcxx_memport_AWQOS</port>
+                <port>m_axi_mcxx_memport_AWREADY</port>
+                <port>m_axi_mcxx_memport_AWREGION</port>
+                <port>m_axi_mcxx_memport_AWSIZE</port>
+                <port>m_axi_mcxx_memport_AWUSER</port>
+                <port>m_axi_mcxx_memport_AWVALID</port>
+                <port>m_axi_mcxx_memport_BID</port>
+                <port>m_axi_mcxx_memport_BREADY</port>
+                <port>m_axi_mcxx_memport_BRESP</port>
+                <port>m_axi_mcxx_memport_BUSER</port>
+                <port>m_axi_mcxx_memport_BVALID</port>
+                <port>m_axi_mcxx_memport_RDATA</port>
+                <port>m_axi_mcxx_memport_RID</port>
+                <port>m_axi_mcxx_memport_RLAST</port>
+                <port>m_axi_mcxx_memport_RREADY</port>
+                <port>m_axi_mcxx_memport_RRESP</port>
+                <port>m_axi_mcxx_memport_RUSER</port>
+                <port>m_axi_mcxx_memport_RVALID</port>
+                <port>m_axi_mcxx_memport_WDATA</port>
+                <port>m_axi_mcxx_memport_WID</port>
+                <port>m_axi_mcxx_memport_WLAST</port>
+                <port>m_axi_mcxx_memport_WREADY</port>
+                <port>m_axi_mcxx_memport_WSTRB</port>
+                <port>m_axi_mcxx_memport_WUSER</port>
+                <port>m_axi_mcxx_memport_WVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="off" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" argName="mcxx_memport"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="128" final_bitwidth="128" argName="mcxx_memport"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="M_AXI">
+                <table>
+                    <keys size="12">Interface, Data Width (SW-&gt;HW), Address Width, Latency, Offset, Register, Max Widen Bitwidth, Max Read Burst Length, Max Write Burst Length, Num Read Outstanding, Num Write Outstanding, Resource Estimate</keys>
+                    <column name="m_axi_mcxx_memport">128 -&gt; 128, 64, 0, off, 0, 0, 16, 16, 16, 16, BRAM=8</column>
+                </table>
+            </item>
+            <item name="AXIS">
+                <table>
+                    <keys size="12">Interface, Direction, Register Mode, TDATA, TDEST, TID, TKEEP, TLAST, TREADY, TSTRB, TUSER, TVALID</keys>
+                    <column name="mcxx_inPort">in, both, 64, , , , , 1, , , 1</column>
+                    <column name="mcxx_outPort">out, both, 64, 2, 1, 8, 1, 1, 8, 1, 1</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst_n">reset, ap_rst_n</column>
+                    <column name="ap_ctrl">ap_ctrl_none, </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="mcxx_inPort">in, stream&lt;ap_uint&lt;64&gt; 0&gt;&amp;</column>
+                    <column name="mcxx_outPort">out, stream&lt;hls::axis&lt;ap_uint&lt;64&gt; 1 1 2 '8' false&gt; 0&gt;&amp;</column>
+                    <column name="mcxx_memport">inout, ap_uint&lt;128&gt;*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="mcxx_inPort">mcxx_inPort, interface</column>
+                    <column name="mcxx_outPort">mcxx_outPort, interface</column>
+                    <column name="mcxx_memport">m_axi_mcxx_memport, interface</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.">
+            <item name="Inferred Burst Summary">
+                <table>
+                    <keys size="6">HW Interface, Direction, Length, Width, Loop, Loop Location</keys>
+                    <column name="m_axi_mcxx_memport">read, 1024, 128, VITIS_LOOP_95_1, matmulBlock/matmulBlock_hls_automatic_clang.cpp:95:22</column>
+                    <column name="m_axi_mcxx_memport">read, 1024, 128, VITIS_LOOP_107_3, matmulBlock/matmulBlock_hls_automatic_clang.cpp:107:23</column>
+                    <column name="m_axi_mcxx_memport">read, 1024, 128, VITIS_LOOP_119_5, matmulBlock/matmulBlock_hls_automatic_clang.cpp:119:23</column>
+                    <column name="m_axi_mcxx_memport">write, 1024, 128, VITIS_LOOP_132_7, matmulBlock/matmulBlock_hls_automatic_clang.cpp:132:23</column>
+                </table>
+            </item>
+            <item name="All M_AXI Variable Accesses">
+                <table>
+                    <keys size="10">HW Interface, Variable, Access Location, Direction, Burst Status, Length, Loop, Loop Location, Resolution, Problem</keys>
+                    <column name="m_axi_mcxx_memport">mcxx_memport, matmulBlock/matmulBlock_hls_automatic_clang.cpp:98:19, read, Widen Fail, , VITIS_LOOP_95_1, matmulBlock/matmulBlock_hls_automatic_clang.cpp:95:22, 214-353, Could not widen since type i128 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_mcxx_memport">mcxx_memport, matmulBlock/matmulBlock_hls_automatic_clang.cpp:98:19, read, Inferred, 1024, VITIS_LOOP_95_1, matmulBlock/matmulBlock_hls_automatic_clang.cpp:95:22, , </column>
+                    <column name="m_axi_mcxx_memport">mcxx_memport, matmulBlock/matmulBlock_hls_automatic_clang.cpp:110:19, read, Widen Fail, , VITIS_LOOP_107_3, matmulBlock/matmulBlock_hls_automatic_clang.cpp:107:23, 214-353, Could not widen since type i128 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_mcxx_memport">mcxx_memport, matmulBlock/matmulBlock_hls_automatic_clang.cpp:110:19, read, Inferred, 1024, VITIS_LOOP_107_3, matmulBlock/matmulBlock_hls_automatic_clang.cpp:107:23, , </column>
+                    <column name="m_axi_mcxx_memport">mcxx_memport, matmulBlock/matmulBlock_hls_automatic_clang.cpp:122:19, read, Widen Fail, , VITIS_LOOP_119_5, matmulBlock/matmulBlock_hls_automatic_clang.cpp:119:23, 214-353, Could not widen since type i128 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_mcxx_memport">mcxx_memport, matmulBlock/matmulBlock_hls_automatic_clang.cpp:122:19, read, Inferred, 1024, VITIS_LOOP_119_5, matmulBlock/matmulBlock_hls_automatic_clang.cpp:119:23, , </column>
+                    <column name="m_axi_mcxx_memport">mcxx_memport, matmulBlock/matmulBlock_hls_automatic_clang.cpp:140:65, write, Widen Fail, , VITIS_LOOP_132_7, matmulBlock/matmulBlock_hls_automatic_clang.cpp:132:23, 214-353, Could not widen since type i128 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_mcxx_memport">mcxx_memport, matmulBlock/matmulBlock_hls_automatic_clang.cpp:140:65, write, Inferred, 1024, VITIS_LOOP_132_7, matmulBlock/matmulBlock_hls_automatic_clang.cpp:132:23, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="inline" location="matmulBlock/matmulBlock_hls_automatic_clang.cpp:35" status="valid" parentFunction="matmulblock" variable="" isDirective="0" options="off"/>
+        <Pragma type="array_partition" location="matmulBlock/matmulBlock_hls_automatic_clang.cpp:36" status="valid" parentFunction="matmulblock" variable="a" isDirective="0" options="variable=a cyclic factor=MBLOCK_FPGA_PWIDTH/64"/>
+        <Pragma type="array_partition" location="matmulBlock/matmulBlock_hls_automatic_clang.cpp:37" status="valid" parentFunction="matmulblock" variable="b" isDirective="0" options="variable=b cyclic factor=BSIZE/(MBLOCK_II*2)"/>
+        <Pragma type="array_partition" location="matmulBlock/matmulBlock_hls_automatic_clang.cpp:38" status="valid" parentFunction="matmulblock" variable="c" isDirective="0" options="variable=c cyclic factor=BSIZE/MBLOCK_II"/>
+        <Pragma type="pipeline" location="matmulBlock/matmulBlock_hls_automatic_clang.cpp:41" status="valid" parentFunction="matmulblock" variable="" isDirective="0" options="II=MBLOCK_II"/>
+        <Pragma type="inline" location="matmulBlock/matmulBlock_hls_automatic_clang.cpp:49" status="valid" parentFunction="mcxx_write_out_port" variable="" isDirective="0" options=""/>
+        <Pragma type="interface" location="matmulBlock/matmulBlock_hls_automatic_clang.cpp:57" status="valid" parentFunction="matmulblock_wrapper" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
+        <Pragma type="interface" location="matmulBlock/matmulBlock_hls_automatic_clang.cpp:58" status="valid" parentFunction="matmulblock_wrapper" variable="mcxx_inPort" isDirective="0" options="axis port=mcxx_inPort"/>
+        <Pragma type="interface" location="matmulBlock/matmulBlock_hls_automatic_clang.cpp:59" status="valid" parentFunction="matmulblock_wrapper" variable="mcxx_outPort" isDirective="0" options="axis port=mcxx_outPort"/>
+        <Pragma type="interface" location="matmulBlock/matmulBlock_hls_automatic_clang.cpp:60" status="valid" parentFunction="matmulblock_wrapper" variable="mcxx_memport" isDirective="0" options="m_axi port=mcxx_memport"/>
+        <Pragma type="protocol" location="matmulBlock/matmulBlock_hls_automatic_clang.cpp:74" status="valid" parentFunction="matmulblock_wrapper" variable="" isDirective="0" options="fixed"/>
+        <Pragma type="pipeline" location="matmulBlock/matmulBlock_hls_automatic_clang.cpp:96" status="valid" parentFunction="matmulblock_wrapper" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="matmulBlock/matmulBlock_hls_automatic_clang.cpp:108" status="valid" parentFunction="matmulblock_wrapper" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="matmulBlock/matmulBlock_hls_automatic_clang.cpp:120" status="valid" parentFunction="matmulblock_wrapper" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="matmulBlock/matmulBlock_hls_automatic_clang.cpp:133" status="valid" parentFunction="matmulblock_wrapper" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="protocol" location="matmulBlock/matmulBlock_hls_automatic_clang.cpp:144" status="valid" parentFunction="matmulblock_wrapper" variable="" isDirective="0" options="fixed"/>
+    </PragmaReport>
+</profile>
+

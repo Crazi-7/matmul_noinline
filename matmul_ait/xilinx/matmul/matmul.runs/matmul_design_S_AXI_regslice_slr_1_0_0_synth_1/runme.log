@@ -1,0 +1,225 @@
+
+*** Running vivado
+    with args -log matmul_design_S_AXI_regslice_slr_1_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source matmul_design_S_AXI_regslice_slr_1_0_0.tcl -init
+
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source vivado.tcl -notrace
+0 Beta devices matching pattern found, 0 enabled.
+enable_beta_device: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1280.234 ; gain = 0.027 ; free physical = 2512 ; free virtual = 14311
+source matmul_design_S_AXI_regslice_slr_1_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/IPs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: matmul_design_S_AXI_regslice_slr_1_0_0
+Command: synth_design -top matmul_design_S_AXI_regslice_slr_1_0_0 -part xcu280-fsvh2892-2L-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16987
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 3068.559 ; gain = 397.629 ; free physical = 206 ; free virtual = 10128
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'matmul_design_S_AXI_regslice_slr_1_0_0' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/synth/matmul_design_S_AXI_regslice_slr_1_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_axi_register_slice' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:3718]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_auto_slr' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1129]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_auto_src' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1219]
+INFO: [Synth 8-6157] synthesizing module 'FDCE' [/tools/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:40789]
+INFO: [Synth 8-6155] done synthesizing module 'FDCE' (0#1) [/tools/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:40789]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_auto_src' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1219]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_auto_dest' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1304]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_axic_reg_srl_fifo' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:3435]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_srl_rtl' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1468]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_srl_rtl' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1468]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_axic_reg_srl_fifo' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:3435]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_auto_dest' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1304]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_auto_slr' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1129]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_auto_slr__parameterized0' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1129]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_auto_src__parameterized0' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1219]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_auto_src__parameterized0' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1219]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_auto_dest__parameterized0' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1304]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_axic_reg_srl_fifo__parameterized0' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:3435]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_axic_reg_srl_fifo__parameterized0' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:3435]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_auto_dest__parameterized0' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1304]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_auto_slr__parameterized0' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1129]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_auto_slr__parameterized1' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1129]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_auto_src__parameterized1' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1219]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_auto_src__parameterized1' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1219]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_auto_dest__parameterized1' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1304]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_axic_reg_srl_fifo__parameterized1' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:3435]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_axic_reg_srl_fifo__parameterized1' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:3435]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_auto_dest__parameterized1' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1304]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_auto_slr__parameterized1' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1129]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_auto_slr__parameterized2' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1129]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_auto_src__parameterized2' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1219]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_auto_src__parameterized2' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1219]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_auto_dest__parameterized2' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1304]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_29_axic_reg_srl_fifo__parameterized2' [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:3435]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_axic_reg_srl_fifo__parameterized2' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:3435]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_auto_dest__parameterized2' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1304]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_auto_slr__parameterized2' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:1129]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_29_axi_register_slice' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ipshared/ff9f/hdl/axi_register_slice_v2_1_vl_rfs.v:3718]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_design_S_AXI_regslice_slr_1_0_0' (0#1) [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/synth/matmul_design_S_AXI_regslice_slr_1_0_0.v:53]
+WARNING: [Synth 8-7129] Port s_axi_wid[6] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[5] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[4] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[3] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[2] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[1] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_29_axi_register_slice is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 3171.527 ; gain = 500.598 ; free physical = 250 ; free virtual = 10002
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 3183.402 ; gain = 512.473 ; free physical = 249 ; free virtual = 10002
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 3183.402 ; gain = 512.473 ; free physical = 249 ; free virtual = 10002
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.2 . Memory (MB): peak = 3197.340 ; gain = 0.000 ; free physical = 233 ; free virtual = 9886
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.runs/matmul_design_S_AXI_regslice_slr_1_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.runs/matmul_design_S_AXI_regslice_slr_1_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc] for cell 'inst'
+WARNING: [Vivado 12-8092] The property 'USER_SLR_ASSIGNMENT' only support hierarchical cells. Setting the property on leaf cell will be ignored by placer. [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc:12]
+WARNING: [Vivado 12-8092] The property 'USER_SLR_ASSIGNMENT' only support hierarchical cells. Setting the property on leaf cell will be ignored by placer. [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc:13]
+WARNING: [Vivado 12-8092] The property 'USER_SLR_ASSIGNMENT' only support hierarchical cells. Setting the property on leaf cell will be ignored by placer. [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc:17]
+WARNING: [Vivado 12-8092] The property 'USER_SLR_ASSIGNMENT' only support hierarchical cells. Setting the property on leaf cell will be ignored by placer. [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc:18]
+Finished Parsing XDC File [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/matmul_design_S_AXI_regslice_slr_1_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/matmul_design_S_AXI_regslice_slr_1_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3362.027 ; gain = 0.000 ; free physical = 223 ; free virtual = 9496
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.94 ; elapsed = 00:00:00.66 . Memory (MB): peak = 3370.934 ; gain = 8.871 ; free physical = 212 ; free virtual = 9498
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 3370.934 ; gain = 700.004 ; free physical = 177 ; free virtual = 9463
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu280-fsvh2892-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 3370.934 ; gain = 700.004 ; free physical = 176 ; free virtual = 9463
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.runs/matmul_design_S_AXI_regslice_slr_1_0_0_synth_1/dont_touch.xdc, line 9).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 12).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 12).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 12).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 12).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 12).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 12).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 13).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 13).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 13).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 13).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 13).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 13).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 13).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 13).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 13).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 13).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 13).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 13).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 17).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 17).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 17).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 17).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 18).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 18).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 18).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 18).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 18).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 18).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 18).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/matmul/matmul.gen/sources_1/bd/matmul_design/ip/matmul_design_S_AXI_regslice_slr_1_0_0/matmul_design_S_AXI_regslice_slr_1_0_0_clocks.xdc, line 18).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 3370.934 ; gain = 700.004 ; free physical = 234 ; free virtual = 9080
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 3370.934 ; gain = 700.004 ; free physical = 155 ; free virtual = 8987
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    5 Bit       Adders := 5     
++---Registers : 
+	              641 Bit    Registers := 3     
+	              523 Bit    Registers := 3     
+	              102 Bit    Registers := 6     
+	               10 Bit    Registers := 3     
+	                5 Bit    Registers := 5     
+	                3 Bit    Registers := 10    
+	                1 Bit    Registers := 40    
++---Muxes : 
+	   2 Input  641 Bit        Muxes := 1     
+	   2 Input  523 Bit        Muxes := 1     
+	   2 Input  102 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 10    
+	   4 Input    2 Bit        Muxes := 5     
+	   8 Input    2 Bit        Muxes := 5     
+	   4 Input    1 Bit        Muxes := 15    
+	  10 Input    1 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 5     
+	   7 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 9024 (col length:94)
+BRAMs: 4032 (col length: RAMB18 288 RAMB36 144)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_29_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[6] in module axi_register_slice_v2_1_29_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[5] in module axi_register_slice_v2_1_29_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[4] in module axi_register_slice_v2_1_29_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[3] in module axi_register_slice_v2_1_29_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[2] in module axi_register_slice_v2_1_29_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[1] in module axi_register_slice_v2_1_29_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_register_slice_v2_1_29_axi_register_slice is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 3370.934 ; gain = 700.004 ; free physical = 166 ; free virtual = 8511
+---------------------------------------------------------------------------------

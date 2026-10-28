@@ -1,7 +1,0 @@
-matmul-*
-*.o
-*_hls_automatic_clang.pp
-*.swp
-*_ait
-*.log
-ait_extracted.json

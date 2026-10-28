@@ -1,0 +1,416 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 226, Column: 5 }
+Function:        _Z16mcxx_task_create7ap_uintILi64EES_ILi8EES1_PKyS1_S3_S1_PK17__fpga_copyinfo_tRN3hls6streamINS7_4axisIS0_Lm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcxx_write_out_port(ap_uint<64>, ap_uint<2>, ap_uint<1>, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 124, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mcxx_task_create(ap_uint<64>, ap_uint<8>, ap_uint<8>, unsigned long long const*, ap_uint<8>, unsigned long long const*, ap_uint<8>, __fpga_copyinfo_t const*, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 203, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 223, Column: 5 }
+Function:        _Z16mcxx_task_create7ap_uintILi64EES_ILi8EES1_PKyS1_S3_S1_PK17__fpga_copyinfo_tRN3hls6streamINS7_4axisIS0_Lm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcxx_write_out_port(ap_uint<64>, ap_uint<2>, ap_uint<1>, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 124, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mcxx_task_create(ap_uint<64>, ap_uint<8>, ap_uint<8>, unsigned long long const*, ap_uint<8>, unsigned long long const*, ap_uint<8>, __fpga_copyinfo_t const*, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 203, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 219, Column: 5 }
+Function:        _Z16mcxx_task_create7ap_uintILi64EES_ILi8EES1_PKyS1_S3_S1_PK17__fpga_copyinfo_tRN3hls6streamINS7_4axisIS0_Lm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcxx_write_out_port(ap_uint<64>, ap_uint<2>, ap_uint<1>, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 124, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mcxx_task_create(ap_uint<64>, ap_uint<8>, ap_uint<8>, unsigned long long const*, ap_uint<8>, unsigned long long const*, ap_uint<8>, __fpga_copyinfo_t const*, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 203, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 216, Column: 5 }
+Function:        _Z16mcxx_task_create7ap_uintILi64EES_ILi8EES1_PKyS1_S3_S1_PK17__fpga_copyinfo_tRN3hls6streamINS7_4axisIS0_Lm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcxx_write_out_port(ap_uint<64>, ap_uint<2>, ap_uint<1>, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 124, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mcxx_task_create(ap_uint<64>, ap_uint<8>, ap_uint<8>, unsigned long long const*, ap_uint<8>, unsigned long long const*, ap_uint<8>, __fpga_copyinfo_t const*, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 203, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 214, Column: 3 }
+Function:        _Z16mcxx_task_create7ap_uintILi64EES_ILi8EES1_PKyS1_S3_S1_PK17__fpga_copyinfo_tRN3hls6streamINS7_4axisIS0_Lm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcxx_write_out_port(ap_uint<64>, ap_uint<2>, ap_uint<1>, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 124, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mcxx_task_create(ap_uint<64>, ap_uint<8>, ap_uint<8>, unsigned long long const*, ap_uint<8>, unsigned long long const*, ap_uint<8>, __fpga_copyinfo_t const*, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 203, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 211, Column: 3 }
+Function:        _Z16mcxx_task_create7ap_uintILi64EES_ILi8EES1_PKyS1_S3_S1_PK17__fpga_copyinfo_tRN3hls6streamINS7_4axisIS0_Lm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcxx_write_out_port(ap_uint<64>, ap_uint<2>, ap_uint<1>, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 124, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mcxx_task_create(ap_uint<64>, ap_uint<8>, ap_uint<8>, unsigned long long const*, ap_uint<8>, unsigned long long const*, ap_uint<8>, __fpga_copyinfo_t const*, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 203, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 210, Column: 3 }
+Function:        _Z16mcxx_task_create7ap_uintILi64EES_ILi8EES1_PKyS1_S3_S1_PK17__fpga_copyinfo_tRN3hls6streamINS7_4axisIS0_Lm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcxx_write_out_port(ap_uint<64>, ap_uint<2>, ap_uint<1>, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 124, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mcxx_task_create(ap_uint<64>, ap_uint<8>, ap_uint<8>, unsigned long long const*, ap_uint<8>, unsigned long long const*, ap_uint<8>, __fpga_copyinfo_t const*, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 203, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 233, Column: 3 }
+Function:        _Z13mcxx_taskwaitRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi64EELm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcxx_write_out_port(ap_uint<64>, ap_uint<2>, ap_uint<1>, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 124, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mcxx_taskwait(hls::stream<ap_uint<8>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 230, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 122, Column: 5 }
+Function:        _Z10matmulFPGA12__mcxx_ptr_tIKfES1_S_IfEjRN3hls6streamI7ap_uintILi8EELi0EEERNS4_INS3_4axisIS5_ILi64EELm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcxx_taskwait(hls::stream<ap_uint<8>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 230, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'matmulFPGA(__mcxx_ptr_t<float const>, __mcxx_ptr_t<float const>, __mcxx_ptr_t<float>, unsigned int, hls::stream<ap_uint<8>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 72, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 117, Column: 21 }
+Function:        _Z10matmulFPGA12__mcxx_ptr_tIKfES1_S_IfEjRN3hls6streamI7ap_uintILi8EELi0EEERNS4_INS3_4axisIS5_ILi64EELm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcxx_task_create(ap_uint<64>, ap_uint<8>, ap_uint<8>, unsigned long long const*, ap_uint<8>, unsigned long long const*, ap_uint<8>, __fpga_copyinfo_t const*, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 203, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'matmulFPGA(__mcxx_ptr_t<float const>, __mcxx_ptr_t<float const>, __mcxx_ptr_t<float>, unsigned int, hls::stream<ap_uint<8>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 72, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 199, Column: 5 }
+Function:        _Z18matmulFPGA_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEERNS0_IS1_ILi8EELi0EEEPKfSD_Pf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcxx_write_out_port(ap_uint<64>, ap_uint<2>, ap_uint<1>, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 124, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'matmulFPGA_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, hls::stream<ap_uint<8>, 0>&, float const*, float const*, float*)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 132, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 197, Column: 5 }
+Function:        _Z18matmulFPGA_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEERNS0_IS1_ILi8EELi0EEEPKfSD_Pf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcxx_write_out_port(ap_uint<64>, ap_uint<2>, ap_uint<1>, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 124, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'matmulFPGA_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, hls::stream<ap_uint<8>, 0>&, float const*, float const*, float*)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 132, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 195, Column: 5 }
+Function:        _Z18matmulFPGA_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEERNS0_IS1_ILi8EELi0EEEPKfSD_Pf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcxx_write_out_port(ap_uint<64>, ap_uint<2>, ap_uint<1>, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 124, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'matmulFPGA_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, hls::stream<ap_uint<8>, 0>&, float const*, float const*, float*)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 132, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 132, Column: 0 }
+Function:        _Z18matmulFPGA_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEERNS0_IS1_ILi8EELi0EEEPKfSD_Pf
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            mcxx_a
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 132, Column: 0 }
+Function:        _Z18matmulFPGA_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEERNS0_IS1_ILi8EELi0EEEPKfSD_Pf
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            mcxx_b
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 132, Column: 0 }
+Function:        _Z18matmulFPGA_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEERNS0_IS1_ILi8EELi0EEEPKfSD_Pf
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            mcxx_c
+  - String:          ''' for cosimulation.'
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            Inline
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 51, Column: 0 }
+Function:        _ZNK12__mcxx_ptr_tIKfEplIjEES1_T_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          '__mcxx_ptr_t<float const>::__mcxx_ptr_t(float const*, unsigned long long) (.13)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 45, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          '__mcxx_ptr_t<float const> __mcxx_ptr_t<float const>::operator+<unsigned int>(unsigned int) const'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 51, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            Inline
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 72, Column: 0 }
+Function:        _Z10matmulFPGA12__mcxx_ptr_tIKfES1_S_IfEjRN3hls6streamI7ap_uintILi8EELi0EEERNS4_INS3_4axisIS5_ILi64EELm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          '__mcxx_ptr_t<float const> __mcxx_ptr_t<float const>::operator+<unsigned int>(unsigned int) const'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 51, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'matmulFPGA(__mcxx_ptr_t<float const>, __mcxx_ptr_t<float const>, __mcxx_ptr_t<float>, unsigned int, hls::stream<ap_uint<8>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 72, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            Inline
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 51, Column: 0 }
+Function:        _ZNK12__mcxx_ptr_tIfEplIjEES0_T_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          '__mcxx_ptr_t<float>::__mcxx_ptr_t(float*, unsigned long long) (.6)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 45, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          '__mcxx_ptr_t<float> __mcxx_ptr_t<float>::operator+<unsigned int>(unsigned int) const'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 51, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            Inline
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 72, Column: 0 }
+Function:        _Z10matmulFPGA12__mcxx_ptr_tIKfES1_S_IfEjRN3hls6streamI7ap_uintILi8EELi0EEERNS4_INS3_4axisIS5_ILi64EELm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          '__mcxx_ptr_t<float> __mcxx_ptr_t<float>::operator+<unsigned int>(unsigned int) const'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 51, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'matmulFPGA(__mcxx_ptr_t<float const>, __mcxx_ptr_t<float const>, __mcxx_ptr_t<float>, unsigned int, hls::stream<ap_uint<8>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                       Line: 72, Column: 0 }
+  - String:          ''''
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_77_3
+  - String:          '> at '
+  - LoopLoc:         'matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:77:30'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 215, Column: 21 }
+Function:        _Z10matmulFPGA12__mcxx_ptr_tIKfES1_S_IfEjRN3hls6streamI7ap_uintILi8EELi0EEERNS4_INS3_4axisIS5_ILi64EELm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_215_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 218, Column: 21 }
+Function:        _Z10matmulFPGA12__mcxx_ptr_tIKfES1_S_IfEjRN3hls6streamI7ap_uintILi8EELi0EEERNS4_INS3_4axisIS5_ILi64EELm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_218_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 225, Column: 21 }
+Function:        _Z10matmulFPGA12__mcxx_ptr_tIKfES1_S_IfEjRN3hls6streamI7ap_uintILi8EELi0EEERNS4_INS3_4axisIS5_ILi64EELm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_225_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 72, Column: 0 }
+Function:        _Z10matmulFPGA12__mcxx_ptr_tIKfES1_S_IfEjRN3hls6streamI7ap_uintILi8EELi0EEERNS4_INS3_4axisIS5_ILi64EELm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_215_1
+  - String:          ''' ('
+  - LoopLoc:         'matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:215:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matmulFPGA
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 72, Column: 0 }
+Function:        _Z10matmulFPGA12__mcxx_ptr_tIKfES1_S_IfEjRN3hls6streamI7ap_uintILi8EELi0EEERNS4_INS3_4axisIS5_ILi64EELm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_218_2
+  - String:          ''' ('
+  - LoopLoc:         'matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:218:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matmulFPGA
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matmulFPGA/matmulFPGA_hls_automatic_clang.cpp, 
+                   Line: 72, Column: 0 }
+Function:        _Z10matmulFPGA12__mcxx_ptr_tIKfES1_S_IfEjRN3hls6streamI7ap_uintILi8EELi0EEERNS4_INS3_4axisIS5_ILi64EELm1ELm1ELm2ELh56ELb0EEELi0EEE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_225_3
+  - String:          ''' ('
+  - LoopLoc:         'matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:225:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matmulFPGA
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...

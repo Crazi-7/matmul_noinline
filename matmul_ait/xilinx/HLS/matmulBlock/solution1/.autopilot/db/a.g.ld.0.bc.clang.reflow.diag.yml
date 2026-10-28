@@ -1,0 +1,729 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 151, Column: 5 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcxx_write_out_port(ap_uint<64>, ap_uint<2>, ap_uint<1>, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'matmulBlock_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, ap_uint<128>*)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 56, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 149, Column: 5 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcxx_write_out_port(ap_uint<64>, ap_uint<2>, ap_uint<1>, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'matmulBlock_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, ap_uint<128>*)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 56, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 147, Column: 5 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mcxx_write_out_port(ap_uint<64>, ap_uint<2>, ap_uint<1>, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'matmulBlock_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, ap_uint<128>*)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 56, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 56, Column: 0 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            mcxx_memport
+  - String:          ''' for cosimulation.'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 135, Column: 25 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_135_8
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 123, Column: 25 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_123_6
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 111, Column: 25 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_111_4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 99, Column: 24 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_99_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 42, Column: 19 }
+Function:        _Z11matmulBlockPKfS0_Pf
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_42_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 56, Column: 0 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_135_8
+  - String:          ''' ('
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:135:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matmulBlock_wrapper
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 56, Column: 0 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_123_6
+  - String:          ''' ('
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:123:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matmulBlock_wrapper
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 56, Column: 0 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_111_4
+  - String:          ''' ('
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:111:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matmulBlock_wrapper
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 56, Column: 0 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_99_2
+  - String:          ''' ('
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:99:24'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matmulBlock_wrapper
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 34, Column: 0 }
+Function:        _Z11matmulBlockPKfS0_Pf
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_42_3
+  - String:          ''' ('
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:42:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matmulBlock
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 63, Column: 0 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EEE1c
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '32'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 62, Column: 0 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EEE1b
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '16'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 61, Column: 0 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EEE1a
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 95, Column: 22 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       mcxx_memport
+  - String:          ' '
+  - BundleName:      mcxx_memport
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_95_1
+  - String:          ' '
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:95:22'
+  - String:          ' '
+  - Function:        'matmulBlock_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, ap_uint<128>*)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 56, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 98, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_99_2.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 107, Column: 23 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep12seq
+  - ArrayName:       mcxx_memport
+  - String:          ' '
+  - BundleName:      mcxx_memport
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_107_3
+  - String:          ' '
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:107:23'
+  - String:          ' '
+  - Function:        'matmulBlock_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, ap_uint<128>*)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 56, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 110, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_111_4.load.21
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 119, Column: 23 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep13seq
+  - ArrayName:       mcxx_memport
+  - String:          ' '
+  - BundleName:      mcxx_memport
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_119_5
+  - String:          ' '
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:119:23'
+  - String:          ' '
+  - Function:        'matmulBlock_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, ap_uint<128>*)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 56, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 122, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_123_6.load.37
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 132, Column: 23 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep14seq
+  - ArrayName:       mcxx_memport
+  - String:          ' '
+  - BundleName:      mcxx_memport
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_132_7
+  - String:          ' '
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:132:23'
+  - String:          ' '
+  - Function:        'matmulBlock_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, ap_uint<128>*)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 56, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 140, Column: 65 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_135_8.store.111
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 132, Column: 23 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i128
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 132, Column: 23 }
+  - OrigDirection:   write
+  - OrigID:          scevgep14seq
+  - ArrayName:       mcxx_memport
+  - String:          ' '
+  - BundleName:      mcxx_memport
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_132_7
+  - String:          ' '
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:132:23'
+  - String:          ' '
+  - Function:        'matmulBlock_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, ap_uint<128>*)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 56, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 119, Column: 23 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i128
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 119, Column: 23 }
+  - OrigDirection:   read
+  - OrigID:          scevgep13seq
+  - ArrayName:       mcxx_memport
+  - String:          ' '
+  - BundleName:      mcxx_memport
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_119_5
+  - String:          ' '
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:119:23'
+  - String:          ' '
+  - Function:        'matmulBlock_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, ap_uint<128>*)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 56, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 107, Column: 23 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i128
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 107, Column: 23 }
+  - OrigDirection:   read
+  - OrigID:          scevgep12seq
+  - ArrayName:       mcxx_memport
+  - String:          ' '
+  - BundleName:      mcxx_memport
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_107_3
+  - String:          ' '
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:107:23'
+  - String:          ' '
+  - Function:        'matmulBlock_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, ap_uint<128>*)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 56, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 95, Column: 22 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i128
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 95, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       mcxx_memport
+  - String:          ' '
+  - BundleName:      mcxx_memport
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_95_1
+  - String:          ' '
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:95:22'
+  - String:          ' '
+  - Function:        'matmulBlock_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, ap_uint<128>*)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 56, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 95, Column: 22 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' and bit width '
+  - Width:           '128'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      mcxx_memport
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_95_1
+  - String:          ' '
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:95:22'
+  - String:          ' '
+  - Function:        'matmulBlock_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, ap_uint<128>*)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 56, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 95, Column: 22 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' and bit width '
+  - Width:           '128'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_95_1
+  - String:          '''('
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:95:22'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      mcxx_memport
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 107, Column: 23 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' and bit width '
+  - Width:           '128'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      mcxx_memport
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_107_3
+  - String:          ' '
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:107:23'
+  - String:          ' '
+  - Function:        'matmulBlock_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, ap_uint<128>*)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 56, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 107, Column: 23 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' and bit width '
+  - Width:           '128'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_107_3
+  - String:          '''('
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:107:23'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      mcxx_memport
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 119, Column: 23 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' and bit width '
+  - Width:           '128'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      mcxx_memport
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_119_5
+  - String:          ' '
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:119:23'
+  - String:          ' '
+  - Function:        'matmulBlock_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, ap_uint<128>*)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 56, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 119, Column: 23 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' and bit width '
+  - Width:           '128'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_119_5
+  - String:          '''('
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:119:23'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      mcxx_memport
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 132, Column: 23 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' and bit width '
+  - Width:           '128'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      mcxx_memport
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_132_7
+  - String:          ' '
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:132:23'
+  - String:          ' '
+  - Function:        'matmulBlock_wrapper(hls::stream<ap_uint<64>, 0>&, hls::stream<hls::axis<ap_uint<64>, 1ul, 1ul, 2ul, (unsigned char)56, false>, 0>&, ap_uint<128>*)'
+    DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                       Line: 56, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: matmulBlock/matmulBlock_hls_automatic_clang.cpp, 
+                   Line: 132, Column: 23 }
+Function:        _Z19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EE
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' and bit width '
+  - Width:           '128'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_132_7
+  - String:          '''('
+  - LoopLoc:         'matmulBlock/matmulBlock_hls_automatic_clang.cpp:132:23'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      mcxx_memport
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

@@ -1,0 +1,33 @@
+{
+  "0": {
+    "basicblocks": 31,
+    "calls": "1",
+    "file": "matmulBlock_hls_automatic_clang.cpp",
+    "fileloc": 56,
+    "instructions": 579,
+    "loads": {
+      "G": 33
+    },
+    "name": "matmulBlock_wrapper",
+    "stores": {
+      "G": 53,
+      "L": 21
+    },
+    "total_instructions": 1088
+  },
+  "1": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "matmulBlock_hls_automatic_clang.cpp",
+    "fileloc": 34,
+    "instructions": 506,
+    "loads": {
+      "G": 130
+    },
+    "name": "matmulBlock",
+    "stores": {
+      "G": 64
+    },
+    "total_instructions": 506
+  }
+}

@@ -1,0 +1,47 @@
+{
+    "1": {
+        "name": "matmulFPGA",
+        "file": "matmulFPGA_hls_automatic_clang.cpp",
+        "fileloc": "72",
+        "instructions": "24",
+        "total_instructions": "136",
+        "calls": "2",
+        "basicblocks": "1",
+        "loads": {
+            "G": "1"
+        }
+    },
+    "2": {
+        "name": "matmulFPGA_Pipeline_VITIS_LOOP_74_1_VITIS_LOOP_75_2_VITIS_LOOP_77_3",
+        "file": "matmulFPGA\/matmulFPGA_hls_automatic_clang.cpp",
+        "fileloc": "74",
+        "instructions": "112",
+        "total_instructions": "112",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "6"
+        },
+        "stores": {
+            "L": "11"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "matmulFPGA_wrapper",
+        "file": "matmulFPGA_hls_automatic_clang.cpp",
+        "fileloc": "132",
+        "instructions": "58",
+        "total_instructions": "194",
+        "calls": "1",
+        "basicblocks": "1",
+        "loads": {
+            "G": "1"
+        },
+        "stores": {
+            "G": "1"
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+	"version": "1.0",
+	"modules": {
+		"matmulBlock_wrapper": {
+			"proto_instances": {
+				"grp_matmulBlock_fu_399/grp_matmulBlock_fu_399_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_matmulBlock_wrapper_Pipeline_VITIS_LOOP_107_3_fu_289/grp_matmulBlock_wrapper_Pipeline_VITIS_LOOP_107_3_fu_289_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_matmulBlock_wrapper_Pipeline_VITIS_LOOP_119_5_fu_328/grp_matmulBlock_wrapper_Pipeline_VITIS_LOOP_119_5_fu_328_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_matmulBlock_wrapper_Pipeline_VITIS_LOOP_132_7_fu_503/grp_matmulBlock_wrapper_Pipeline_VITIS_LOOP_132_7_fu_503_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_matmulBlock_wrapper_Pipeline_VITIS_LOOP_95_1_fu_278/grp_matmulBlock_wrapper_Pipeline_VITIS_LOOP_95_1_fu_278_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "matmulFPGA_wrapper",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "matmulFPGA_wrapper"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/HLS_matmulFPGA.tcl",
+    "sourceLine": 10,
+    "success": true
+  }
+]

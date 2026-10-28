@@ -1,0 +1,59 @@
+In file included from matmulBlock/matmulBlock_hls_automatic_clang.cpp:16:
+/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/ap_axi_sdata.h:29:45: warning: variable templates are a C++14 extension [-Wc++14-extensions]
+template <typename T> constexpr std::size_t bitwidth = sizeof(T) * 8;
+                                            ^
+/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/ap_axi_sdata.h:42:23: warning: variable templates are a C++14 extension [-Wc++14-extensions]
+constexpr std::size_t bytewidth = (bitwidth<T> + 8 - 1) / 8;
+                      ^
+matmulBlock/matmulBlock_hls_automatic_clang.cpp:35:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matmulBlock_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline off
+        ^
+matmulBlock/matmulBlock_hls_automatic_clang.cpp:36:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matmulBlock_XLX_SEP_ PragmaOptions=variable=a cyclic factor=MBLOCK_FPGA_PWIDTH/64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=a cyclic factor=MBLOCK_FPGA_PWIDTH/64
+        ^
+matmulBlock/matmulBlock_hls_automatic_clang.cpp:37:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matmulBlock_XLX_SEP_ PragmaOptions=variable=b cyclic factor=BSIZE/(MBLOCK_II*2)_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=b cyclic factor=BSIZE/(MBLOCK_II*2)
+        ^
+matmulBlock/matmulBlock_hls_automatic_clang.cpp:38:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matmulBlock_XLX_SEP_ PragmaOptions=variable=c cyclic factor=BSIZE/MBLOCK_II_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=c cyclic factor=BSIZE/MBLOCK_II
+        ^
+matmulBlock/matmulBlock_hls_automatic_clang.cpp:41:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matmulBlock_XLX_SEP_ PragmaOptions=II=MBLOCK_II_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline II=MBLOCK_II
+        ^
+matmulBlock/matmulBlock_hls_automatic_clang.cpp:49:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mcxx_write_out_port_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/HLS_matmulBlock.tcl:10:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=matmulBlock_wrapper_XLX_SEP_ PragmaOptions=name=matmulBlock_wrapper_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=matmulBlock_wrapper
+        ^
+matmulBlock/matmulBlock_hls_automatic_clang.cpp:57:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matmulBlock_wrapper_XLX_SEP_ PragmaOptions=ap_ctrl_none port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS interface ap_ctrl_none port=return
+        ^
+matmulBlock/matmulBlock_hls_automatic_clang.cpp:58:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matmulBlock_wrapper_XLX_SEP_ PragmaOptions=axis port=mcxx_inPort_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS interface axis port=mcxx_inPort
+        ^
+matmulBlock/matmulBlock_hls_automatic_clang.cpp:59:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matmulBlock_wrapper_XLX_SEP_ PragmaOptions=axis port=mcxx_outPort_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS interface axis port=mcxx_outPort
+        ^
+matmulBlock/matmulBlock_hls_automatic_clang.cpp:60:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matmulBlock_wrapper_XLX_SEP_ PragmaOptions=m_axi port=mcxx_memport_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS interface m_axi port=mcxx_memport
+        ^
+matmulBlock/matmulBlock_hls_automatic_clang.cpp:74:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=protocol_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matmulBlock_wrapper_XLX_SEP_ PragmaOptions=fixed_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS protocol fixed
+        ^
+matmulBlock/matmulBlock_hls_automatic_clang.cpp:96:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matmulBlock_wrapper_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline II=1
+        ^
+matmulBlock/matmulBlock_hls_automatic_clang.cpp:108:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matmulBlock_wrapper_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline II=1
+        ^
+matmulBlock/matmulBlock_hls_automatic_clang.cpp:120:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matmulBlock_wrapper_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline II=1
+        ^
+matmulBlock/matmulBlock_hls_automatic_clang.cpp:133:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matmulBlock_wrapper_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline II=1
+        ^
+matmulBlock/matmulBlock_hls_automatic_clang.cpp:144:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=protocol_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matmulBlock_wrapper_XLX_SEP_ PragmaOptions=fixed_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS protocol fixed
+        ^
+19 warnings generated.

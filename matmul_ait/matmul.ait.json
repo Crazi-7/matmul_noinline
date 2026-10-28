@@ -1,0 +1,71 @@
+{
+    "project_name": "matmul",
+    "user_id": "0x32fd3362",
+    "board_part": "xilinx.com:au280:part0:1.1",
+    "accs": {
+        "matmulFPGA": {
+            "full_path": "/tmp/fpga-934a6a/matmulFPGA_hls_automatic_clang.cpp",
+            "filename": "matmulFPGA_hls_automatic_clang.cpp",
+            "name": "matmulFPGA",
+            "type": "5839957875",
+            "num_instances": "1",
+            "task_creation": "True",
+            "instrumentation": "False",
+            "periodic": "False",
+            "lock": "False",
+            "deps": "True",
+            "ompif": "False",
+            "imp": "False",
+            "instances": {
+                "0": {
+                    "rst": "/system_reset/clk_app_managed_rstn",
+                    "clk": "/clock_generator/clk_app",
+                    "interfaces": {
+                        "a": {
+                            "src": "/matmulFPGA_0/matmulFPGA_ompss/m_axi_mcxx_a",
+                            "width": "32",
+                            "dst": "0"
+                        },
+                        "b": {
+                            "src": "/matmulFPGA_0/matmulFPGA_ompss/m_axi_mcxx_b",
+                            "width": "32",
+                            "dst": "0"
+                        },
+                        "c": {
+                            "src": "/matmulFPGA_0/matmulFPGA_ompss/m_axi_mcxx_c",
+                            "width": "32",
+                            "dst": "0"
+                        }
+                    }
+                }
+            }
+        },
+        "matmulBlock": {
+            "full_path": "/tmp/fpga-934a6a/matmulBlock_hls_automatic_clang.cpp",
+            "filename": "matmulBlock_hls_automatic_clang.cpp",
+            "name": "matmulBlock",
+            "type": "6945317266",
+            "num_instances": "1",
+            "task_creation": "False",
+            "instrumentation": "False",
+            "periodic": "False",
+            "lock": "False",
+            "deps": "False",
+            "ompif": "False",
+            "imp": "False",
+            "instances": {
+                "0": {
+                    "rst": "/system_reset/clk_app_managed_rstn",
+                    "clk": "/clock_generator/clk_app",
+                    "interfaces": {
+                        "memport": {
+                            "src": "/matmulBlock_0/matmulBlock_ompss/m_axi_mcxx_memport",
+                            "width": "128",
+                            "dst": "0"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

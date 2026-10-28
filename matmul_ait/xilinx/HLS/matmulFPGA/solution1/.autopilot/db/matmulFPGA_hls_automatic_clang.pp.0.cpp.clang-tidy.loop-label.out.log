@@ -1,0 +1,55 @@
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:1445:7: warning: Added loop label VITIS_LOOP_1207_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1207_1: 
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:1445:7: note: FIX-IT applied suggested code changes
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:2419:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:2419:5: note: FIX-IT applied suggested code changes
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:2433:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:2433:5: note: FIX-IT applied suggested code changes
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:2447:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:2447:5: note: FIX-IT applied suggested code changes
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:4076:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:4076:7: note: FIX-IT applied suggested code changes
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:8790:5: warning: Added loop label VITIS_LOOP_74_1:   [xilinx-label-all-loops]
+    for (unsigned int i = 0; i < msize / BSIZE; i++) {
+    ^~~
+    VITIS_LOOP_74_1: 
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:8790:5: note: FIX-IT applied suggested code changes
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:8791:9: warning: Added loop label VITIS_LOOP_75_2:   [xilinx-label-all-loops]
+        for (unsigned int k = 0; k < msize / BSIZE; k++) {
+        ^~~
+        VITIS_LOOP_75_2: 
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:8791:9: note: FIX-IT applied suggested code changes
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:8793:13: warning: Added loop label VITIS_LOOP_77_3:   [xilinx-label-all-loops]
+            for (unsigned int j = 0; j < msize / BSIZE; j++) {
+            ^~~
+            VITIS_LOOP_77_3: 
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:8793:13: note: FIX-IT applied suggested code changes
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:8935:3: warning: Added loop label VITIS_LOOP_215_1:   [xilinx-label-all-loops]
+  for (ap_uint<4> i = 0; i < numDeps(3,0); ++i) {
+  ^~~
+  VITIS_LOOP_215_1: 
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:8935:3: note: FIX-IT applied suggested code changes
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:8938:3: warning: Added loop label VITIS_LOOP_218_2:   [xilinx-label-all-loops]
+  for (ap_uint<4> i = 0; i < numCopies(3,0); ++i) {
+  ^~~
+  VITIS_LOOP_218_2: 
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:8938:3: note: FIX-IT applied suggested code changes
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:8945:3: warning: Added loop label VITIS_LOOP_225_3:   [xilinx-label-all-loops]
+  for (ap_uint<4> i = 0; i < numArgs(3,0); ++i) {
+  ^~~
+  VITIS_LOOP_225_3: 
+/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulFPGA/solution1/.autopilot/db/matmulFPGA_hls_automatic_clang.pp.0.cpp:8945:3: note: FIX-IT applied suggested code changes

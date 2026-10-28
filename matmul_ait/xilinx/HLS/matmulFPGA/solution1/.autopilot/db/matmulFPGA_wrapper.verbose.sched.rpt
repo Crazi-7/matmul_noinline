@@ -1,0 +1,300 @@
+
+
+================================================================
+== Vitis HLS Report for 'matmulFPGA_wrapper'
+================================================================
+* Date:           Wed Oct 28 03:19:33 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        matmulFPGA
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplusHBM
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.613 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 18
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%spectopmodule_ln132 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_8" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:132]   --->   Operation 19 'spectopmodule' 'spectopmodule_ln132' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln132 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_9, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:132]   --->   Operation 20 'specinterface' 'specinterface_ln132' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %mcxx_inPort, void @empty_1, i32 1, i32 1, void @empty_2, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %mcxx_inPort"   --->   Operation 22 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %mcxx_outPort_V_data_V, i8 %mcxx_outPort_V_keep_V, i8 %mcxx_outPort_V_strb_V, i1 %mcxx_outPort_V_user_V, i1 %mcxx_outPort_V_last_V, i1 %mcxx_outPort_V_id_V, i2 %mcxx_outPort_V_dest_V, void @empty_1, i32 1, i32 1, void @empty_2, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %mcxx_outPort_V_data_V"   --->   Operation 24 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %mcxx_outPort_V_keep_V"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %mcxx_outPort_V_strb_V"   --->   Operation 26 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %mcxx_outPort_V_user_V"   --->   Operation 27 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %mcxx_outPort_V_last_V"   --->   Operation 28 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %mcxx_outPort_V_id_V"   --->   Operation 29 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %mcxx_outPort_V_dest_V"   --->   Operation 30 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %mcxx_spawnInPort, void @empty_1, i32 1, i32 1, void @empty_2, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %mcxx_spawnInPort"   --->   Operation 32 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %mcxx_a, void @empty_3, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty_4, void @empty_11, void @empty, i32 16, i32 16, i32 16, i32 16, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %mcxx_a"   --->   Operation 34 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %mcxx_b, void @empty_3, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty_5, void @empty_11, void @empty, i32 16, i32 16, i32 16, i32 16, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 35 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %mcxx_b"   --->   Operation 36 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %mcxx_c, void @empty_3, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty_6, void @empty_11, void @empty, i32 16, i32 16, i32 16, i32 16, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %mcxx_c"   --->   Operation 38 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (1.00ns)   --->   "%p_024 = read i64 @_ssdm_op_Read.axis.volatile.i64P128A, i64 %mcxx_inPort" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:140]   --->   Operation 39 'read' 'p_024' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 2 <SV = 1> <Delay = 1.00>
+ST_2 : Operation 40 [1/1] (1.00ns)   --->   "%mcxx_inPort_read = read i64 @_ssdm_op_Read.axis.volatile.i64P128A, i64 %mcxx_inPort" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:141]   --->   Operation 40 'read' 'mcxx_inPort_read' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%store_ln141 = store i64 %mcxx_inPort_read, i64 %p_mcxx_taskId" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:141]   --->   Operation 41 'store' 'store_ln141' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.00>
+ST_3 : Operation 42 [1/1] (1.00ns)   --->   "%axis_word_data_1 = read i64 @_ssdm_op_Read.axis.volatile.i64P128A, i64 %mcxx_inPort" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:142]   --->   Operation 42 'read' 'axis_word_data_1' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 4 <SV = 3> <Delay = 1.00>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%rbegin1 = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_0" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:146]   --->   Operation 43 'specregionbegin' 'rbegin1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] (1.00ns)   --->   "%p_027 = read i64 @_ssdm_op_Read.axis.volatile.i64P128A, i64 %mcxx_inPort" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:152]   --->   Operation 44 'read' 'p_027' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 5 <SV = 4> <Delay = 1.00>
+ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%wait_ln153 = wait void @_ssdm_op_Wait, i32 1" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:153]   --->   Operation 45 'wait' 'wait_ln153' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 46 [1/1] (1.00ns)   --->   "%mcxx_offset_0 = read i64 @_ssdm_op_Read.axis.volatile.i64P128A, i64 %mcxx_inPort" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:154]   --->   Operation 46 'read' 'mcxx_offset_0' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 6 <SV = 5> <Delay = 1.00>
+ST_6 : Operation 47 [1/1] (0.00ns)   --->   "%wait_ln158 = wait void @_ssdm_op_Wait, i32 1" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:158]   --->   Operation 47 'wait' 'wait_ln158' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 48 [1/1] (1.00ns)   --->   "%p_029 = read i64 @_ssdm_op_Read.axis.volatile.i64P128A, i64 %mcxx_inPort" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:162]   --->   Operation 48 'read' 'p_029' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 7 <SV = 6> <Delay = 1.00>
+ST_7 : Operation 49 [1/1] (0.00ns)   --->   "%wait_ln163 = wait void @_ssdm_op_Wait, i32 1" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:163]   --->   Operation 49 'wait' 'wait_ln163' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 50 [1/1] (1.00ns)   --->   "%mcxx_offset_1 = read i64 @_ssdm_op_Read.axis.volatile.i64P128A, i64 %mcxx_inPort" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:164]   --->   Operation 50 'read' 'mcxx_offset_1' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 8 <SV = 7> <Delay = 1.00>
+ST_8 : Operation 51 [1/1] (0.00ns)   --->   "%wait_ln168 = wait void @_ssdm_op_Wait, i32 1" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:168]   --->   Operation 51 'wait' 'wait_ln168' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 52 [1/1] (1.00ns)   --->   "%p_031 = read i64 @_ssdm_op_Read.axis.volatile.i64P128A, i64 %mcxx_inPort" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:172]   --->   Operation 52 'read' 'p_031' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 9 <SV = 8> <Delay = 1.00>
+ST_9 : Operation 53 [1/1] (0.00ns)   --->   "%wait_ln173 = wait void @_ssdm_op_Wait, i32 1" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:173]   --->   Operation 53 'wait' 'wait_ln173' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 54 [1/1] (1.00ns)   --->   "%mcxx_offset_2 = read i64 @_ssdm_op_Read.axis.volatile.i64P128A, i64 %mcxx_inPort" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:174]   --->   Operation 54 'read' 'mcxx_offset_2' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 10 <SV = 9> <Delay = 1.00>
+ST_10 : Operation 55 [1/1] (0.00ns)   --->   "%wait_ln178 = wait void @_ssdm_op_Wait, i32 1" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:178]   --->   Operation 55 'wait' 'wait_ln178' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 56 [1/1] (1.00ns)   --->   "%p_033 = read i64 @_ssdm_op_Read.axis.volatile.i64P128A, i64 %mcxx_inPort" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:182]   --->   Operation 56 'read' 'p_033' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 11 <SV = 10> <Delay = 1.00>
+ST_11 : Operation 57 [1/1] (0.00ns)   --->   "%wait_ln183 = wait void @_ssdm_op_Wait, i32 1" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:183]   --->   Operation 57 'wait' 'wait_ln183' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 58 [1/1] (1.00ns)   --->   "%mcxx_inPort_read_5 = read i64 @_ssdm_op_Read.axis.volatile.i64P128A, i64 %mcxx_inPort" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:185]   --->   Operation 58 'read' 'mcxx_inPort_read_5' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_11 : Operation 59 [1/1] (0.00ns)   --->   "%msize = trunc i64 %mcxx_inPort_read_5" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:186]   --->   Operation 59 'trunc' 'msize' <Predicate = true> <Delay = 0.00>
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 60 [1/1] (0.00ns)   --->   "%wait_ln188 = wait void @_ssdm_op_Wait, i32 1" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:188]   --->   Operation 60 'wait' 'wait_ln188' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 61 [1/1] (0.00ns)   --->   "%specprotocol_ln189 = specprotocol void @_ssdm_op_SpecProtocol, i64 1, void @empty" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:189]   --->   Operation 61 'specprotocol' 'specprotocol_ln189' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 62 [1/1] (0.00ns)   --->   "%rend2 = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_0, i32 %rbegin1" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:189]   --->   Operation 62 'specregionend' 'rend2' <Predicate = true> <Delay = 0.00>
+
+State 13 <SV = 12> <Delay = 2.73>
+ST_13 : Operation 63 [2/2] (2.73ns)   --->   "%call_ln190 = call void @matmulFPGA, i64 %mcxx_offset_0, i64 %mcxx_offset_1, i64 %mcxx_offset_2, i32 %msize, i8 %mcxx_spawnInPort, i64 %mcxx_outPort_V_data_V, i8 %mcxx_outPort_V_keep_V, i8 %mcxx_outPort_V_strb_V, i1 %mcxx_outPort_V_user_V, i1 %mcxx_outPort_V_last_V, i1 %mcxx_outPort_V_id_V, i2 %mcxx_outPort_V_dest_V, i64 %p_mcxx_taskId" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:190]   --->   Operation 63 'call' 'call_ln190' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 0.00>
+ST_14 : Operation 64 [1/2] (0.00ns)   --->   "%call_ln190 = call void @matmulFPGA, i64 %mcxx_offset_0, i64 %mcxx_offset_1, i64 %mcxx_offset_2, i32 %msize, i8 %mcxx_spawnInPort, i64 %mcxx_outPort_V_data_V, i8 %mcxx_outPort_V_keep_V, i8 %mcxx_outPort_V_strb_V, i1 %mcxx_outPort_V_user_V, i1 %mcxx_outPort_V_last_V, i1 %mcxx_outPort_V_id_V, i2 %mcxx_outPort_V_dest_V, i64 %p_mcxx_taskId" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:190]   --->   Operation 64 'call' 'call_ln190' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 1.00>
+ST_15 : Operation 65 [1/1] (0.00ns)   --->   "%rbegin = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_10" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:190]   --->   Operation 65 'specregionbegin' 'rbegin' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 66 [1/1] (0.00ns)   --->   "%wait_ln194 = wait void @_ssdm_op_Wait, i32 1" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:194]   --->   Operation 66 'wait' 'wait_ln194' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 67 [2/2] (1.00ns)   --->   "%write_ln130 = write void @_ssdm_op_Write.axis.volatile.i64P0A.i8P0A.i8P0A.i1P0A.i1P0A.i1P0A.i2P0A, i64 %mcxx_outPort_V_data_V, i8 %mcxx_outPort_V_keep_V, i8 %mcxx_outPort_V_strb_V, i1 %mcxx_outPort_V_user_V, i1 %mcxx_outPort_V_last_V, i1 %mcxx_outPort_V_id_V, i2 %mcxx_outPort_V_dest_V, i64 3, i8 0, i8 0, i1 0, i1 0, i1 0, i2 0" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:130->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:195]   --->   Operation 67 'write' 'write_ln130' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 16 <SV = 15> <Delay = 1.00>
+ST_16 : Operation 68 [1/2] (1.00ns)   --->   "%write_ln130 = write void @_ssdm_op_Write.axis.volatile.i64P0A.i8P0A.i8P0A.i1P0A.i1P0A.i1P0A.i2P0A, i64 %mcxx_outPort_V_data_V, i8 %mcxx_outPort_V_keep_V, i8 %mcxx_outPort_V_strb_V, i1 %mcxx_outPort_V_user_V, i1 %mcxx_outPort_V_last_V, i1 %mcxx_outPort_V_id_V, i2 %mcxx_outPort_V_dest_V, i64 3, i8 0, i8 0, i1 0, i1 0, i1 0, i2 0" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:130->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:195]   --->   Operation 68 'write' 'write_ln130' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_16 : Operation 69 [1/1] (0.00ns)   --->   "%wait_ln196 = wait void @_ssdm_op_Wait, i32 1" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:196]   --->   Operation 69 'wait' 'wait_ln196' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 70 [1/1] (0.00ns)   --->   "%axis_word_data = load i64 %p_mcxx_taskId" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:127->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:197]   --->   Operation 70 'load' 'axis_word_data' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 71 [2/2] (1.00ns)   --->   "%write_ln130 = write void @_ssdm_op_Write.axis.volatile.i64P0A.i8P0A.i8P0A.i1P0A.i1P0A.i1P0A.i2P0A, i64 %mcxx_outPort_V_data_V, i8 %mcxx_outPort_V_keep_V, i8 %mcxx_outPort_V_strb_V, i1 %mcxx_outPort_V_user_V, i1 %mcxx_outPort_V_last_V, i1 %mcxx_outPort_V_id_V, i2 %mcxx_outPort_V_dest_V, i64 %axis_word_data, i8 0, i8 0, i1 0, i1 0, i1 0, i2 0" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:130->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:197]   --->   Operation 71 'write' 'write_ln130' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 17 <SV = 16> <Delay = 1.00>
+ST_17 : Operation 72 [1/2] (1.00ns)   --->   "%write_ln130 = write void @_ssdm_op_Write.axis.volatile.i64P0A.i8P0A.i8P0A.i1P0A.i1P0A.i1P0A.i2P0A, i64 %mcxx_outPort_V_data_V, i8 %mcxx_outPort_V_keep_V, i8 %mcxx_outPort_V_strb_V, i1 %mcxx_outPort_V_user_V, i1 %mcxx_outPort_V_last_V, i1 %mcxx_outPort_V_id_V, i2 %mcxx_outPort_V_dest_V, i64 %axis_word_data, i8 0, i8 0, i1 0, i1 0, i1 0, i2 0" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:130->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:197]   --->   Operation 72 'write' 'write_ln130' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_17 : Operation 73 [1/1] (0.00ns)   --->   "%wait_ln198 = wait void @_ssdm_op_Wait, i32 1" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:198]   --->   Operation 73 'wait' 'wait_ln198' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 74 [2/2] (1.00ns)   --->   "%write_ln130 = write void @_ssdm_op_Write.axis.volatile.i64P0A.i8P0A.i8P0A.i1P0A.i1P0A.i1P0A.i2P0A, i64 %mcxx_outPort_V_data_V, i8 %mcxx_outPort_V_keep_V, i8 %mcxx_outPort_V_strb_V, i1 %mcxx_outPort_V_user_V, i1 %mcxx_outPort_V_last_V, i1 %mcxx_outPort_V_id_V, i2 %mcxx_outPort_V_dest_V, i64 %axis_word_data_1, i8 0, i8 0, i1 0, i1 1, i1 0, i2 0" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:130->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:199]   --->   Operation 74 'write' 'write_ln130' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 18 <SV = 17> <Delay = 1.00>
+ST_18 : Operation 75 [1/2] (1.00ns)   --->   "%write_ln130 = write void @_ssdm_op_Write.axis.volatile.i64P0A.i8P0A.i8P0A.i1P0A.i1P0A.i1P0A.i2P0A, i64 %mcxx_outPort_V_data_V, i8 %mcxx_outPort_V_keep_V, i8 %mcxx_outPort_V_strb_V, i1 %mcxx_outPort_V_user_V, i1 %mcxx_outPort_V_last_V, i1 %mcxx_outPort_V_id_V, i2 %mcxx_outPort_V_dest_V, i64 %axis_word_data_1, i8 0, i8 0, i1 0, i1 1, i1 0, i2 0" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:130->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:199]   --->   Operation 75 'write' 'write_ln130' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_18 : Operation 76 [1/1] (0.00ns)   --->   "%wait_ln200 = wait void @_ssdm_op_Wait, i32 1" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:200]   --->   Operation 76 'wait' 'wait_ln200' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 77 [1/1] (0.00ns)   --->   "%specprotocol_ln201 = specprotocol void @_ssdm_op_SpecProtocol, i64 1, void @empty" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:201]   --->   Operation 77 'specprotocol' 'specprotocol_ln201' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 78 [1/1] (0.00ns)   --->   "%rend = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_10, i32 %rbegin" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:201]   --->   Operation 78 'specregionend' 'rend' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 79 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln202 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i64 %mcxx_outPort_V_data_V, i8 %mcxx_outPort_V_keep_V, i8 %mcxx_outPort_V_strb_V, i1 %mcxx_outPort_V_user_V, i1 %mcxx_outPort_V_last_V, i1 %mcxx_outPort_V_id_V, i2 %mcxx_outPort_V_dest_V, void @empty_7" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:202]   --->   Operation 79 'specaxissidechannel' 'specaxissidechannel_ln202' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 80 [1/1] (0.00ns)   --->   "%ret_ln202 = ret" [matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:202]   --->   Operation 80 'ret' 'ret_ln202' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 1.000ns
+The critical path consists of the following:
+	axis read operation ('p_024', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:140) on port 'mcxx_inPort' (matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:140) [34]  (1.000 ns)
+
+ <State 2>: 1.000ns
+The critical path consists of the following:
+	axis read operation ('mcxx_inPort_read', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:141) on port 'mcxx_inPort' (matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:141) [35]  (1.000 ns)
+
+ <State 3>: 1.000ns
+The critical path consists of the following:
+	axis read operation ('axis_word.data', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:142) on port 'mcxx_inPort' (matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:142) [37]  (1.000 ns)
+
+ <State 4>: 1.000ns
+The critical path consists of the following:
+	axis read operation ('p_027', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:152) on port 'mcxx_inPort' (matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:152) [39]  (1.000 ns)
+
+ <State 5>: 1.000ns
+The critical path consists of the following:
+	axis read operation ('mcxx_offset_0', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:154) on port 'mcxx_inPort' (matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:154) [41]  (1.000 ns)
+
+ <State 6>: 1.000ns
+The critical path consists of the following:
+	axis read operation ('p_029', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:162) on port 'mcxx_inPort' (matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:162) [43]  (1.000 ns)
+
+ <State 7>: 1.000ns
+The critical path consists of the following:
+	axis read operation ('mcxx_offset_1', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:164) on port 'mcxx_inPort' (matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:164) [45]  (1.000 ns)
+
+ <State 8>: 1.000ns
+The critical path consists of the following:
+	axis read operation ('p_031', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:172) on port 'mcxx_inPort' (matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:172) [47]  (1.000 ns)
+
+ <State 9>: 1.000ns
+The critical path consists of the following:
+	axis read operation ('mcxx_offset_2', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:174) on port 'mcxx_inPort' (matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:174) [49]  (1.000 ns)
+
+ <State 10>: 1.000ns
+The critical path consists of the following:
+	axis read operation ('p_033', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:182) on port 'mcxx_inPort' (matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:182) [51]  (1.000 ns)
+
+ <State 11>: 1.000ns
+The critical path consists of the following:
+	axis read operation ('mcxx_inPort_read_5', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:185) on port 'mcxx_inPort' (matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:185) [53]  (1.000 ns)
+
+ <State 12>: 0.000ns
+The critical path consists of the following:
+
+ <State 13>: 2.733ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln190', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:190) to 'matmulFPGA' [58]  (2.733 ns)
+
+ <State 14>: 0.000ns
+The critical path consists of the following:
+
+ <State 15>: 1.000ns
+The critical path consists of the following:
+	axis write operation ('write_ln130', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:130->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:195) on port 'mcxx_outPort_V_data_V' (matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:130->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:195) [61]  (1.000 ns)
+
+ <State 16>: 1.000ns
+The critical path consists of the following:
+	axis write operation ('write_ln130', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:130->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:195) on port 'mcxx_outPort_V_data_V' (matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:130->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:195) [61]  (1.000 ns)
+
+ <State 17>: 1.000ns
+The critical path consists of the following:
+	axis write operation ('write_ln130', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:130->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:197) on port 'mcxx_outPort_V_data_V' (matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:130->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:197) [64]  (1.000 ns)
+
+ <State 18>: 1.000ns
+The critical path consists of the following:
+	axis write operation ('write_ln130', matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:130->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:199) on port 'mcxx_outPort_V_data_V' (matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:130->matmulFPGA/matmulFPGA_hls_automatic_clang.cpp:199) [66]  (1.000 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

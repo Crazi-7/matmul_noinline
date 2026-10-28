@@ -1,0 +1,24 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="solution1"/>
+    </name>
+    <project>
+        <value string="matmulFPGA"/>
+    </project>
+    <flowTarget value="vivado"/>
+    <targetInfo>
+        <TargetInfo value="xcu280:-fsvh2892:-2L-e"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/virtexuplus/virtexuplus" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock name="default" period="200MHz" default="false"/>
+    </clockList>
+    <config>
+        <config_rtl reset_async="1" reset_level="low"/>
+        <config_interface default_slave_interface="none" m_axi_addr64="1" m_axi_offset="off"/>
+        <config_export display_name="matmulFPGA" format="ip_catalog" library="ompss" rtl="verilog" taxonomy="/BSC/OmpSs" vendor="bsc"/>
+    </config>
+</AutoPilot:solution>
+

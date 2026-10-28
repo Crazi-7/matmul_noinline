@@ -1,0 +1,111 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-4074" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/ap_axi_sdata.h:29:45" msg_body="variable templates are a C++14 extension">
+        <args ClangWarningOption="c++14-extensions"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4074" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/ap_axi_sdata.h:42:23" msg_body="variable templates are a C++14 extension">
+        <args ClangWarningOption="c++14-extensions"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmulBlock" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:36:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmulBlock" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=a cyclic factor=MBLOCK_FPGA_PWIDTH/64" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmulBlock" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=b cyclic factor=BSIZE/(MBLOCK_II*2)" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:38:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmulBlock" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=c cyclic factor=BSIZE/MBLOCK_II" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:41:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmulBlock" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=MBLOCK_II" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:49:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mcxx_write_out_port" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/HLS_matmulBlock.tcl:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matmulBlock_wrapper" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=matmulBlock_wrapper" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:57:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmulBlock_wrapper" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:58:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmulBlock_wrapper" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=mcxx_inPort" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:59:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmulBlock_wrapper" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=mcxx_outPort" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:60:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmulBlock_wrapper" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=mcxx_memport" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:74:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmulBlock_wrapper" ARG_PragmaIsValid="1" ARG_PragmaOptions="fixed" ARG_PragmaType="protocol" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:96:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmulBlock_wrapper" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:108:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmulBlock_wrapper" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:120:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmulBlock_wrapper" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:133:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmulBlock_wrapper" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:144:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmulBlock_wrapper" ARG_PragmaIsValid="1" ARG_PragmaOptions="fixed" ARG_PragmaType="protocol" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:151:5" msg_body="Inlining function 'mcxx_write_out_port(ap_uint&lt;64&gt;, ap_uint&lt;2&gt;, ap_uint&lt;1&gt;, hls::stream&lt;hls::axis&lt;ap_uint&lt;64&gt;, 1ul, 1ul, 2ul, (unsigned char)56, false&gt;, 0&gt;&amp;)' into 'matmulBlock_wrapper(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;64&gt;, 1ul, 1ul, 2ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;128&gt;*)'">
+        <args Callee="mcxx_write_out_port(ap_uint&lt;64&gt;, ap_uint&lt;2&gt;, ap_uint&lt;1&gt;, hls::stream&lt;hls::axis&lt;ap_uint&lt;64&gt;, 1ul, 1ul, 2ul, (unsigned char)56, false&gt;, 0&gt;&amp;)" Callee-DebugLoc="File matmulBlock/matmulBlock_hls_automatic_clang.cpp Line 48 Column 0" Caller="matmulBlock_wrapper(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;64&gt;, 1ul, 1ul, 2ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;128&gt;*)" Caller-DebugLoc="File matmulBlock/matmulBlock_hls_automatic_clang.cpp Line 56 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:149:5" msg_body="Inlining function 'mcxx_write_out_port(ap_uint&lt;64&gt;, ap_uint&lt;2&gt;, ap_uint&lt;1&gt;, hls::stream&lt;hls::axis&lt;ap_uint&lt;64&gt;, 1ul, 1ul, 2ul, (unsigned char)56, false&gt;, 0&gt;&amp;)' into 'matmulBlock_wrapper(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;64&gt;, 1ul, 1ul, 2ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;128&gt;*)'">
+        <args Callee="mcxx_write_out_port(ap_uint&lt;64&gt;, ap_uint&lt;2&gt;, ap_uint&lt;1&gt;, hls::stream&lt;hls::axis&lt;ap_uint&lt;64&gt;, 1ul, 1ul, 2ul, (unsigned char)56, false&gt;, 0&gt;&amp;)" Callee-DebugLoc="File matmulBlock/matmulBlock_hls_automatic_clang.cpp Line 48 Column 0" Caller="matmulBlock_wrapper(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;64&gt;, 1ul, 1ul, 2ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;128&gt;*)" Caller-DebugLoc="File matmulBlock/matmulBlock_hls_automatic_clang.cpp Line 56 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:147:5" msg_body="Inlining function 'mcxx_write_out_port(ap_uint&lt;64&gt;, ap_uint&lt;2&gt;, ap_uint&lt;1&gt;, hls::stream&lt;hls::axis&lt;ap_uint&lt;64&gt;, 1ul, 1ul, 2ul, (unsigned char)56, false&gt;, 0&gt;&amp;)' into 'matmulBlock_wrapper(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;64&gt;, 1ul, 1ul, 2ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;128&gt;*)'">
+        <args Callee="mcxx_write_out_port(ap_uint&lt;64&gt;, ap_uint&lt;2&gt;, ap_uint&lt;1&gt;, hls::stream&lt;hls::axis&lt;ap_uint&lt;64&gt;, 1ul, 1ul, 2ul, (unsigned char)56, false&gt;, 0&gt;&amp;)" Callee-DebugLoc="File matmulBlock/matmulBlock_hls_automatic_clang.cpp Line 48 Column 0" Caller="matmulBlock_wrapper(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;64&gt;, 1ul, 1ul, 2ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;128&gt;*)" Caller-DebugLoc="File matmulBlock/matmulBlock_hls_automatic_clang.cpp Line 56 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-386" msg_severity="WARNING" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:56:0" msg_body="A depth specification is required for MAXI interface port 'mcxx_memport' for cosimulation.">
+        <args Name="mcxx_memport"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:135:25" msg_body="Loop 'VITIS_LOOP_135_8' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_135_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:123:25" msg_body="Loop 'VITIS_LOOP_123_6' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_123_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:111:25" msg_body="Loop 'VITIS_LOOP_111_4' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_111_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:99:24" msg_body="Loop 'VITIS_LOOP_99_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_99_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:42:19" msg_body="Loop 'VITIS_LOOP_42_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_42_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:56:0" msg_body="Unrolling loop 'VITIS_LOOP_135_8' (matmulBlock/matmulBlock_hls_automatic_clang.cpp:135:25) in function 'matmulBlock_wrapper' completely with a factor of 4">
+        <args Factor="4" LoopLoc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:135:25" LoopName="VITIS_LOOP_135_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:56:0" msg_body="Unrolling loop 'VITIS_LOOP_123_6' (matmulBlock/matmulBlock_hls_automatic_clang.cpp:123:25) in function 'matmulBlock_wrapper' completely with a factor of 4">
+        <args Factor="4" LoopLoc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:123:25" LoopName="VITIS_LOOP_123_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:56:0" msg_body="Unrolling loop 'VITIS_LOOP_111_4' (matmulBlock/matmulBlock_hls_automatic_clang.cpp:111:25) in function 'matmulBlock_wrapper' completely with a factor of 4">
+        <args Factor="4" LoopLoc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:111:25" LoopName="VITIS_LOOP_111_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:56:0" msg_body="Unrolling loop 'VITIS_LOOP_99_2' (matmulBlock/matmulBlock_hls_automatic_clang.cpp:99:24) in function 'matmulBlock_wrapper' completely with a factor of 4">
+        <args Factor="4" LoopLoc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:99:24" LoopName="VITIS_LOOP_99_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:34:0" msg_body="Unrolling loop 'VITIS_LOOP_42_3' (matmulBlock/matmulBlock_hls_automatic_clang.cpp:42:19) in function 'matmulBlock' completely with a factor of 64">
+        <args Factor="64" LoopLoc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:42:19" LoopName="VITIS_LOOP_42_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:63:0" msg_body="Applying array_partition to '_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EEE1c': Cyclic partitioning with factor 32 on dimension 1.">
+        <args Dim="1" Factor="32" Mode="Cyclic" UOName="_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EEE1c"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:62:0" msg_body="Applying array_partition to '_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EEE1b': Cyclic partitioning with factor 16 on dimension 1.">
+        <args Dim="1" Factor="16" Mode="Cyclic" UOName="_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EEE1b"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matmulBlock/matmulBlock_hls_automatic_clang.cpp:61:0" msg_body="Applying array_partition to '_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EEE1a': Cyclic partitioning with factor 2 on dimension 1.">
+        <args Dim="1" Factor="2" Mode="Cyclic" UOName="_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1ELm1ELm2ELh56ELb0EEELi0EEEPS1_ILi128EEE1a"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

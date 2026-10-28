@@ -1,0 +1,355 @@
+
+
+================================================================
+== Synthesis Summary Report of 'matmulBlock_wrapper'
+================================================================
++ General Information: 
+    * Date:           Wed Oct 28 03:20:15 2026
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        matmulBlock
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplusHBM
+    * Target device:  xcu280-fsvh2892-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----------+-------------+------------+-----+
+    |                      Modules                     | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |          |          |             |            |     |
+    |                      & Loops                     | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |    DSP   |      FF     |     LUT    | URAM|
+    +--------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----------+-------------+------------+-----+
+    |+ matmulBlock_wrapper                             |     -|  0.00|    12362|  6.181e+04|         -|    12363|     -|        no|  32 (~0%)|  160 (1%)|  25459 (~0%)|  22348 (1%)|    -|
+    | + matmulBlock_wrapper_Pipeline_VITIS_LOOP_95_1   |     -|  0.00|     1027|  5.135e+03|         -|     1027|     -|        no|         -|         -|    166 (~0%)|    97 (~0%)|    -|
+    |  o VITIS_LOOP_95_1                               |     -|  3.65|     1025|  5.125e+03|         3|        1|  1024|       yes|         -|         -|            -|           -|    -|
+    | + matmulBlock_wrapper_Pipeline_VITIS_LOOP_107_3  |     -|  0.00|     1027|  5.135e+03|         -|     1027|     -|        no|         -|         -|    164 (~0%)|    86 (~0%)|    -|
+    |  o VITIS_LOOP_107_3                              |     -|  3.65|     1025|  5.125e+03|         3|        1|  1024|       yes|         -|         -|            -|           -|    -|
+    | + matmulBlock_wrapper_Pipeline_VITIS_LOOP_119_5  |     -|  0.00|     1027|  5.135e+03|         -|     1027|     -|        no|         -|         -|    164 (~0%)|    86 (~0%)|    -|
+    |  o VITIS_LOOP_119_5                              |     -|  3.65|     1025|  5.125e+03|         3|        1|  1024|       yes|         -|         -|            -|           -|    -|
+    | + matmulBlock                                    |     -|  0.07|     8203|  4.102e+04|         -|     8203|     -|        no|         -|  160 (1%)|  21860 (~0%)|  14530 (1%)|    -|
+    |  o VITIS_LOOP_39_1_VITIS_LOOP_40_2               |     -|  3.65|     8201|  4.100e+04|        12|        2|  4096|       yes|         -|         -|            -|           -|    -|
+    | + matmulBlock_wrapper_Pipeline_VITIS_LOOP_132_7  |     -|  0.00|     1027|  5.135e+03|         -|     1027|     -|        no|         -|         -|    147 (~0%)|   258 (~0%)|    -|
+    |  o VITIS_LOOP_132_7                              |     -|  3.65|     1025|  5.125e+03|         3|        1|  1024|       yes|         -|         -|            -|           -|    -|
+    +--------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----------+-------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++--------------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface          | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|                    | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++--------------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_mcxx_memport | 128 -> 128 | 64            | 0       | off    | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=8            |
++--------------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* AXIS
++--------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface    | Direction | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++--------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| mcxx_inPort  | in        | both          | 64    |       |     |       |       | 1      |       |       | 1      |
+| mcxx_outPort | out       | both          | 64    | 2     | 1   | 8     | 1     | 1      | 8     | 1     | 1      |
++--------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++--------------+-----------+---------------------------------------------------------+
+| Argument     | Direction | Datatype                                                |
++--------------+-----------+---------------------------------------------------------+
+| mcxx_inPort  | in        | stream<ap_uint<64>, 0>&                                 |
+| mcxx_outPort | out       | stream<hls::axis<ap_uint<64>, 1, 1, 2, '8', false>, 0>& |
+| mcxx_memport | inout     | ap_uint<128>*                                           |
++--------------+-----------+---------------------------------------------------------+
+
+* SW-to-HW Mapping
++--------------+--------------------+-----------+
+| Argument     | HW Interface       | HW Type   |
++--------------+--------------------+-----------+
+| mcxx_inPort  | mcxx_inPort        | interface |
+| mcxx_outPort | mcxx_outPort       | interface |
+| mcxx_memport | m_axi_mcxx_memport | interface |
++--------------+--------------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------------+-----------+--------+-------+------------------+--------------------------------------------------------+
+| HW Interface       | Direction | Length | Width | Loop             | Loop Location                                          |
++--------------------+-----------+--------+-------+------------------+--------------------------------------------------------+
+| m_axi_mcxx_memport | read      | 1024   | 128   | VITIS_LOOP_95_1  | matmulBlock/matmulBlock_hls_automatic_clang.cpp:95:22  |
+| m_axi_mcxx_memport | read      | 1024   | 128   | VITIS_LOOP_107_3 | matmulBlock/matmulBlock_hls_automatic_clang.cpp:107:23 |
+| m_axi_mcxx_memport | read      | 1024   | 128   | VITIS_LOOP_119_5 | matmulBlock/matmulBlock_hls_automatic_clang.cpp:119:23 |
+| m_axi_mcxx_memport | write     | 1024   | 128   | VITIS_LOOP_132_7 | matmulBlock/matmulBlock_hls_automatic_clang.cpp:132:23 |
++--------------------+-----------+--------+-------+------------------+--------------------------------------------------------+
+
+* All M_AXI Variable Accesses
++--------------------+--------------+--------------------------------------------------------+-----------+--------------+--------+------------------+--------------------------------------------------------+------------+--------------------------------------------------------------------------------------------------------+
+| HW Interface       | Variable     | Access Location                                        | Direction | Burst Status | Length | Loop             | Loop Location                                          | Resolution | Problem                                                                                                |
++--------------------+--------------+--------------------------------------------------------+-----------+--------------+--------+------------------+--------------------------------------------------------+------------+--------------------------------------------------------------------------------------------------------+
+| m_axi_mcxx_memport | mcxx_memport | matmulBlock/matmulBlock_hls_automatic_clang.cpp:98:19  | read      | Widen Fail   |        | VITIS_LOOP_95_1  | matmulBlock/matmulBlock_hls_automatic_clang.cpp:95:22  | 214-353    | Could not widen since type i128 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_mcxx_memport | mcxx_memport | matmulBlock/matmulBlock_hls_automatic_clang.cpp:98:19  | read      | Inferred     | 1024   | VITIS_LOOP_95_1  | matmulBlock/matmulBlock_hls_automatic_clang.cpp:95:22  |            |                                                                                                        |
+| m_axi_mcxx_memport | mcxx_memport | matmulBlock/matmulBlock_hls_automatic_clang.cpp:110:19 | read      | Widen Fail   |        | VITIS_LOOP_107_3 | matmulBlock/matmulBlock_hls_automatic_clang.cpp:107:23 | 214-353    | Could not widen since type i128 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_mcxx_memport | mcxx_memport | matmulBlock/matmulBlock_hls_automatic_clang.cpp:110:19 | read      | Inferred     | 1024   | VITIS_LOOP_107_3 | matmulBlock/matmulBlock_hls_automatic_clang.cpp:107:23 |            |                                                                                                        |
+| m_axi_mcxx_memport | mcxx_memport | matmulBlock/matmulBlock_hls_automatic_clang.cpp:122:19 | read      | Widen Fail   |        | VITIS_LOOP_119_5 | matmulBlock/matmulBlock_hls_automatic_clang.cpp:119:23 | 214-353    | Could not widen since type i128 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_mcxx_memport | mcxx_memport | matmulBlock/matmulBlock_hls_automatic_clang.cpp:122:19 | read      | Inferred     | 1024   | VITIS_LOOP_119_5 | matmulBlock/matmulBlock_hls_automatic_clang.cpp:119:23 |            |                                                                                                        |
+| m_axi_mcxx_memport | mcxx_memport | matmulBlock/matmulBlock_hls_automatic_clang.cpp:140:65 | write     | Widen Fail   |        | VITIS_LOOP_132_7 | matmulBlock/matmulBlock_hls_automatic_clang.cpp:132:23 | 214-353    | Could not widen since type i128 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_mcxx_memport | mcxx_memport | matmulBlock/matmulBlock_hls_automatic_clang.cpp:140:65 | write     | Inferred     | 1024   | VITIS_LOOP_132_7 | matmulBlock/matmulBlock_hls_automatic_clang.cpp:132:23 |            |                                                                                                        |
++--------------------+--------------+--------------------------------------------------------+-----------+--------------+--------+------------------+--------------------------------------------------------+------------+--------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------------------+-----+--------+------------+------+---------+---------+
+| Name                                             | DSP | Pragma | Variable   | Op   | Impl    | Latency |
++--------------------------------------------------+-----+--------+------------+------+---------+---------+
+| + matmulBlock_wrapper                            | 160 |        |            |      |         |         |
+|  + matmulBlock_wrapper_Pipeline_VITIS_LOOP_95_1  | 0   |        |            |      |         |         |
+|    add_ln95_fu_147_p2                            |     |        | add_ln95   | add  | fabric  | 0       |
+|  + matmulBlock_wrapper_Pipeline_VITIS_LOOP_107_3 | 0   |        |            |      |         |         |
+|    add_ln107_fu_345_p2                           |     |        | add_ln107  | add  | fabric  | 0       |
+|  + matmulBlock_wrapper_Pipeline_VITIS_LOOP_119_5 | 0   |        |            |      |         |         |
+|    add_ln119_fu_593_p2                           |     |        | add_ln119  | add  | fabric  | 0       |
+|  + matmulBlock                                   | 160 |        |            |      |         |         |
+|    add_ln39_fu_1986_p2                           |     |        | add_ln39   | add  | fabric  | 0       |
+|    add_ln39_1_fu_2012_p2                         |     |        | add_ln39_1 | add  | fabric  | 0       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U89             | 3   |        | mul        | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U57            | 2   |        | add        | fadd | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U90             | 3   |        | mul13_1    | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U91             | 3   |        | mul13_2    | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U92             | 3   |        | mul13_3    | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U93             | 3   |        | mul13_4    | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U94             | 3   |        | mul13_5    | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U95             | 3   |        | mul13_6    | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U96             | 3   |        | mul13_7    | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U97             | 3   |        | mul13_8    | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U98             | 3   |        | mul13_9    | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U99             | 3   |        | mul13_s    | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U100            | 3   |        | mul13_10   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U101            | 3   |        | mul13_11   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U102            | 3   |        | mul13_12   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U103            | 3   |        | mul13_13   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U104            | 3   |        | mul13_14   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U105            | 3   |        | mul13_15   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U106            | 3   |        | mul13_16   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U107            | 3   |        | mul13_17   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U108            | 3   |        | mul13_18   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U109            | 3   |        | mul13_19   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U110            | 3   |        | mul13_20   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U111            | 3   |        | mul13_21   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U112            | 3   |        | mul13_22   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U113            | 3   |        | mul13_23   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U114            | 3   |        | mul13_24   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U115            | 3   |        | mul13_25   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U116            | 3   |        | mul13_26   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U117            | 3   |        | mul13_27   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U118            | 3   |        | mul13_28   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U119            | 3   |        | mul13_29   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U120            | 3   |        | mul13_30   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U89             | 3   |        | mul13_31   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U90             | 3   |        | mul13_32   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U91             | 3   |        | mul13_33   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U92             | 3   |        | mul13_34   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U93             | 3   |        | mul13_35   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U94             | 3   |        | mul13_36   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U95             | 3   |        | mul13_37   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U96             | 3   |        | mul13_38   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U97             | 3   |        | mul13_39   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U98             | 3   |        | mul13_40   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U99             | 3   |        | mul13_41   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U100            | 3   |        | mul13_42   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U101            | 3   |        | mul13_43   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U102            | 3   |        | mul13_44   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U103            | 3   |        | mul13_45   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U104            | 3   |        | mul13_46   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U105            | 3   |        | mul13_47   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U106            | 3   |        | mul13_48   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U107            | 3   |        | mul13_49   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U108            | 3   |        | mul13_50   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U109            | 3   |        | mul13_51   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U110            | 3   |        | mul13_52   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U111            | 3   |        | mul13_53   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U112            | 3   |        | mul13_54   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U113            | 3   |        | mul13_55   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U114            | 3   |        | mul13_56   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U115            | 3   |        | mul13_57   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U116            | 3   |        | mul13_58   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U117            | 3   |        | mul13_59   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U118            | 3   |        | mul13_60   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U119            | 3   |        | mul13_61   | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U120            | 3   |        | mul13_62   | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U58            | 2   |        | add18_1    | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U59            | 2   |        | add18_2    | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U60            | 2   |        | add18_3    | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U61            | 2   |        | add18_4    | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U62            | 2   |        | add18_5    | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U63            | 2   |        | add18_6    | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U64            | 2   |        | add18_7    | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U65            | 2   |        | add18_8    | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U66            | 2   |        | add18_9    | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U67            | 2   |        | add18_s    | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U68            | 2   |        | add18_10   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U69            | 2   |        | add18_11   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U70            | 2   |        | add18_12   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U71            | 2   |        | add18_13   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U72            | 2   |        | add18_14   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U73            | 2   |        | add18_15   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U74            | 2   |        | add18_16   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U75            | 2   |        | add18_17   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U76            | 2   |        | add18_18   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U77            | 2   |        | add18_19   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U78            | 2   |        | add18_20   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U79            | 2   |        | add18_21   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U80            | 2   |        | add18_22   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U81            | 2   |        | add18_23   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U82            | 2   |        | add18_24   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U83            | 2   |        | add18_25   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U84            | 2   |        | add18_26   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U85            | 2   |        | add18_27   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U86            | 2   |        | add18_28   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U87            | 2   |        | add18_29   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U88            | 2   |        | add18_30   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U57            | 2   |        | add18_31   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U58            | 2   |        | add18_32   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U59            | 2   |        | add18_33   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U60            | 2   |        | add18_34   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U61            | 2   |        | add18_35   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U62            | 2   |        | add18_36   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U63            | 2   |        | add18_37   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U64            | 2   |        | add18_38   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U65            | 2   |        | add18_39   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U66            | 2   |        | add18_40   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U67            | 2   |        | add18_41   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U68            | 2   |        | add18_42   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U69            | 2   |        | add18_43   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U70            | 2   |        | add18_44   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U71            | 2   |        | add18_45   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U72            | 2   |        | add18_46   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U73            | 2   |        | add18_47   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U74            | 2   |        | add18_48   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U75            | 2   |        | add18_49   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U76            | 2   |        | add18_50   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U77            | 2   |        | add18_51   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U78            | 2   |        | add18_52   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U79            | 2   |        | add18_53   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U80            | 2   |        | add18_54   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U81            | 2   |        | add18_55   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U82            | 2   |        | add18_56   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U83            | 2   |        | add18_57   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U84            | 2   |        | add18_58   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U85            | 2   |        | add18_59   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U86            | 2   |        | add18_60   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U87            | 2   |        | add18_61   | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U88            | 2   |        | add18_62   | fadd | fulldsp | 4       |
+|    add_ln40_fu_2116_p2                           |     |        | add_ln40   | add  | fabric  | 0       |
+|  + matmulBlock_wrapper_Pipeline_VITIS_LOOP_132_7 | 0   |        |            |      |         |         |
+|    add_ln132_fu_592_p2                           |     |        | add_ln132  | add  | fabric  | 0       |
++--------------------------------------------------+-----+--------+------------+------+---------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++------------------------------------------------------------------------------------------+-----------+-------+------+------+--------+--------------------------------------------------------------------------------------+------+---------+------------------+
+| Name                                                                                     | Usage     | Type  | BRAM | URAM | Pragma | Variable                                                                             | Impl | Latency | Bitwidth, Depth, |
+|                                                                                          |           |       |      |      |        |                                                                                      |      |         | Banks            |
++------------------------------------------------------------------------------------------+-----------+-------+------+------+--------+--------------------------------------------------------------------------------------+------+---------+------------------+
+| + matmulBlock_wrapper                                                                    |           |       | 32   | 0    |        |                                                                                      |      |         |                  |
+|   mcxx_memport_m_axi_U                                                                   | interface | m_axi | 8    |      |        |                                                                                      |      |         |                  |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_a_1_U                             | ram_t2p   |       | 4    |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_a_1                             | auto | 1       | 32, 2048, 1      |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_a_U                               | ram_t2p   |       | 4    |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_a                               | auto | 1       | 32, 2048, 1      |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_9_U                             | ram_s2p   |       | 1    |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_9                             | auto | 1       | 32, 256, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_7_U                             | ram_s2p   |       | 1    |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_7                             | auto | 1       | 32, 256, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_6_U                             | ram_s2p   |       | 1    |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_6                             | auto | 1       | 32, 256, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_5_U                             | ram_s2p   |       | 1    |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_5                             | auto | 1       | 32, 256, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_4_U                             | ram_s2p   |       | 1    |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_4                             | auto | 1       | 32, 256, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_3_U                             | ram_s2p   |       | 1    |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_3                             | auto | 1       | 32, 256, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_2_U                             | ram_s2p   |       | 1    |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_2                             | auto | 1       | 32, 256, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_1_U                             | ram_s2p   |       | 1    |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_1                             | auto | 1       | 32, 256, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_U                               | ram_s2p   |       | 1    |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b                               | auto | 1       | 32, 256, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_8_U                             | ram_s2p   |       | 1    |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_b_8                             | auto | 1       | 32, 256, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_27_U | ram_s2p   |       | 1    |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_27 | auto | 1       | 32, 256, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_26_U | ram_s2p   |       | 1    |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_26 | auto | 1       | 32, 256, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_25_U | ram_s2p   |       | 1    |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_25 | auto | 1       | 32, 256, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_24_U | ram_s2p   |       | 1    |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_24 | auto | 1       | 32, 256, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_23_U | ram_s2p   |       | 1    |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_23 | auto | 1       | 32, 256, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_22_U | ram_s2p   |       | 1    |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_22 | auto | 1       | 32, 256, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_9_U                             | ram_t2p   |       |      |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_9                             | auto | 1       | 32, 128, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_8_U                             | ram_t2p   |       |      |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_8                             | auto | 1       | 32, 128, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_7_U                             | ram_t2p   |       |      |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_7                             | auto | 1       | 32, 128, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_6_U                             | ram_t2p   |       |      |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_6                             | auto | 1       | 32, 128, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_5_U                             | ram_t2p   |       |      |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_5                             | auto | 1       | 32, 128, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_4_U                             | ram_t2p   |       |      |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_4                             | auto | 1       | 32, 128, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_3_U                             | ram_t2p   |       |      |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_3                             | auto | 1       | 32, 128, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_2_U                             | ram_t2p   |       |      |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_2                             | auto | 1       | 32, 128, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_1_U                             | ram_t2p   |       |      |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_1                             | auto | 1       | 32, 128, 1       |
+|   matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c_U                               | ram_t2p   |       |      |      |        | matmulBlock_wrapper_stream_stream_axis_0_ap_uint_128_c                               | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_21_U | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_21 | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_20_U | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_20 | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_19_U | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_19 | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_18_U | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_18 | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_17_U | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_17 | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_16_U | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_16 | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_15_U | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_15 | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_14_U | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_14 | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_13_U | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_13 | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_12_U | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_12 | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_11_U | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_11 | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_10_U | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_10 | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_9_U  | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_9  | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_8_U  | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_8  | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_7_U  | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_7  | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_6_U  | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_6  | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_5_U  | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_5  | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_4_U  | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_4  | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_3_U  | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_3  | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_2_U  | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_2  | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_1_U  | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_1  | auto | 1       | 32, 128, 1       |
+|   p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1_U    | ram_t2p   |       |      |      |        | p_ZZ19matmulBlock_wrapperRN3hls6streamI7ap_uintILi64EELi0EEERNS0_INS_4axisIS2_Lm1    | auto | 1       | 32, 128, 1       |
++------------------------------------------------------------------------------------------+-----------+-------+------+------+--------+--------------------------------------------------------------------------------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------------------------+-----------------------------------------------------------------------------------------+
+| Type            | Options                                        | Location                                                                                |
++-----------------+------------------------------------------------+-----------------------------------------------------------------------------------------+
+| inline          | off                                            | matmulBlock/matmulBlock_hls_automatic_clang.cpp:35 in matmulblock                       |
+| array_partition | variable=a cyclic factor=MBLOCK_FPGA_PWIDTH/64 | matmulBlock/matmulBlock_hls_automatic_clang.cpp:36 in matmulblock, a                    |
+| array_partition | variable=b cyclic factor=BSIZE/(MBLOCK_II*2)   | matmulBlock/matmulBlock_hls_automatic_clang.cpp:37 in matmulblock, b                    |
+| array_partition | variable=c cyclic factor=BSIZE/MBLOCK_II       | matmulBlock/matmulBlock_hls_automatic_clang.cpp:38 in matmulblock, c                    |
+| pipeline        | II=MBLOCK_II                                   | matmulBlock/matmulBlock_hls_automatic_clang.cpp:41 in matmulblock                       |
+| inline          |                                                | matmulBlock/matmulBlock_hls_automatic_clang.cpp:49 in mcxx_write_out_port               |
+| interface       | ap_ctrl_none port=return                       | matmulBlock/matmulBlock_hls_automatic_clang.cpp:57 in matmulblock_wrapper, return       |
+| interface       | axis port=mcxx_inPort                          | matmulBlock/matmulBlock_hls_automatic_clang.cpp:58 in matmulblock_wrapper, mcxx_inPort  |
+| interface       | axis port=mcxx_outPort                         | matmulBlock/matmulBlock_hls_automatic_clang.cpp:59 in matmulblock_wrapper, mcxx_outPort |
+| interface       | m_axi port=mcxx_memport                        | matmulBlock/matmulBlock_hls_automatic_clang.cpp:60 in matmulblock_wrapper, mcxx_memport |
+| protocol        | fixed                                          | matmulBlock/matmulBlock_hls_automatic_clang.cpp:74 in matmulblock_wrapper               |
+| pipeline        | II=1                                           | matmulBlock/matmulBlock_hls_automatic_clang.cpp:96 in matmulblock_wrapper               |
+| pipeline        | II=1                                           | matmulBlock/matmulBlock_hls_automatic_clang.cpp:108 in matmulblock_wrapper              |
+| pipeline        | II=1                                           | matmulBlock/matmulBlock_hls_automatic_clang.cpp:120 in matmulblock_wrapper              |
+| pipeline        | II=1                                           | matmulBlock/matmulBlock_hls_automatic_clang.cpp:133 in matmulblock_wrapper              |
+| protocol        | fixed                                          | matmulBlock/matmulBlock_hls_automatic_clang.cpp:144 in matmulblock_wrapper              |
++-----------------+------------------------------------------------+-----------------------------------------------------------------------------------------+
+
+

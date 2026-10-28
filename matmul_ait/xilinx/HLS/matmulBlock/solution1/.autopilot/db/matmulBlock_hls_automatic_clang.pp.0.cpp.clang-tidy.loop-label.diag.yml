@@ -1,0 +1,148 @@
+---
+MainSourceFile:  /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/solution1/.autopilot/db/matmulBlock_hls_automatic_clang.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1207_1:  '
+    FileOffset:      1207
+    FilePath:        /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_int_base.h
+    Replacements:    
+      - FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/solution1/.autopilot/db/matmulBlock_hls_automatic_clang.pp.0.cpp
+        Offset:          59613
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1207_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/solution1/.autopilot/db/matmulBlock_hls_automatic_clang.pp.0.cpp
+        Offset:          287441
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/solution1/.autopilot/db/matmulBlock_hls_automatic_clang.pp.0.cpp
+        Offset:          287909
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/solution1/.autopilot/db/matmulBlock_hls_automatic_clang.pp.0.cpp
+        Offset:          288378
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/solution1/.autopilot/db/matmulBlock_hls_automatic_clang.pp.0.cpp
+        Offset:          572333
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_39_1:  '
+    FileOffset:      39
+    FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/matmulBlock_hls_automatic_clang.cpp
+    Replacements:    
+      - FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/solution1/.autopilot/db/matmulBlock_hls_automatic_clang.pp.0.cpp
+        Offset:          1026501
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_39_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_40_2:  '
+    FileOffset:      40
+    FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/matmulBlock_hls_automatic_clang.cpp
+    Replacements:    
+      - FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/solution1/.autopilot/db/matmulBlock_hls_automatic_clang.pp.0.cpp
+        Offset:          1026543
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_40_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_42_3:  '
+    FileOffset:      42
+    FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/matmulBlock_hls_automatic_clang.cpp
+    Replacements:    
+      - FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/solution1/.autopilot/db/matmulBlock_hls_automatic_clang.pp.0.cpp
+        Offset:          1026612
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_42_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_95_1:  '
+    FileOffset:      95
+    FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/matmulBlock_hls_automatic_clang.cpp
+    Replacements:    
+      - FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/solution1/.autopilot/db/matmulBlock_hls_automatic_clang.pp.0.cpp
+        Offset:          1028501
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_95_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_99_2:  '
+    FileOffset:      99
+    FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/matmulBlock_hls_automatic_clang.cpp
+    Replacements:    
+      - FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/solution1/.autopilot/db/matmulBlock_hls_automatic_clang.pp.0.cpp
+        Offset:          1028711
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_99_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_107_3:  '
+    FileOffset:      107
+    FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/matmulBlock_hls_automatic_clang.cpp
+    Replacements:    
+      - FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/solution1/.autopilot/db/matmulBlock_hls_automatic_clang.pp.0.cpp
+        Offset:          1028978
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_107_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_111_4:  '
+    FileOffset:      111
+    FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/matmulBlock_hls_automatic_clang.cpp
+    Replacements:    
+      - FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/solution1/.autopilot/db/matmulBlock_hls_automatic_clang.pp.0.cpp
+        Offset:          1029188
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_111_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_119_5:  '
+    FileOffset:      119
+    FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/matmulBlock_hls_automatic_clang.cpp
+    Replacements:    
+      - FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/solution1/.autopilot/db/matmulBlock_hls_automatic_clang.pp.0.cpp
+        Offset:          1029455
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_119_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_123_6:  '
+    FileOffset:      123
+    FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/matmulBlock_hls_automatic_clang.cpp
+    Replacements:    
+      - FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/solution1/.autopilot/db/matmulBlock_hls_automatic_clang.pp.0.cpp
+        Offset:          1029665
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_123_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_132_7:  '
+    FileOffset:      132
+    FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/matmulBlock_hls_automatic_clang.cpp
+    Replacements:    
+      - FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/solution1/.autopilot/db/matmulBlock_hls_automatic_clang.pp.0.cpp
+        Offset:          1029950
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_132_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_135_8:  '
+    FileOffset:      135
+    FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/matmulBlock_hls_automatic_clang.cpp
+    Replacements:    
+      - FilePath:        /home/crazi/Documents/bambu-test/Functiononly/matmul/matmul/matmul_ait/xilinx/HLS/matmulBlock/solution1/.autopilot/db/matmulBlock_hls_automatic_clang.pp.0.cpp
+        Offset:          1030080
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_135_8: '
+...

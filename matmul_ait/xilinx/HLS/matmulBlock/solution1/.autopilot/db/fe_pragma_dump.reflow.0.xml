@@ -1,0 +1,63 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<64, false>::ap_range_ref(ap_int_base<64, false>*, int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<128, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, false>::operator()(int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<8>::ap_uint<64, false>(ap_range_ref<64, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="matmulBlock/matmulBlock_hls_automatic_clang.cpp" line="133" pragmaType="pipeline" parentfunction="matmulBlock_wrapper" off="0" ii="1" rewind="0" style=""/>
+<pragma file="matmulBlock/matmulBlock_hls_automatic_clang.cpp" line="120" pragmaType="pipeline" parentfunction="matmulBlock_wrapper" off="0" ii="1" rewind="0" style=""/>
+<pragma file="matmulBlock/matmulBlock_hls_automatic_clang.cpp" line="108" pragmaType="pipeline" parentfunction="matmulBlock_wrapper" off="0" ii="1" rewind="0" style=""/>
+<pragma file="matmulBlock/matmulBlock_hls_automatic_clang.cpp" line="96" pragmaType="pipeline" parentfunction="matmulBlock_wrapper" off="0" ii="1" rewind="0" style=""/>
+<pragma file="matmulBlock/matmulBlock_hls_automatic_clang.cpp" line="57" pragmaType="interface" parentfunction="matmulBlock_wrapper" mode="ap_ctrl_none" port="return" name=""/>
+<pragma file="matmulBlock/matmulBlock_hls_automatic_clang.cpp" line="58" pragmaType="interface" parentfunction="matmulBlock_wrapper" mode="axis" port="mcxx_inPort" register="0" register_mode="both" name="" depth="-1"/>
+<pragma file="matmulBlock/matmulBlock_hls_automatic_clang.cpp" line="59" pragmaType="interface" parentfunction="matmulBlock_wrapper" mode="axis" port="mcxx_outPort" register="0" register_mode="both" name="" depth="-1"/>
+<pragma file="matmulBlock/matmulBlock_hls_automatic_clang.cpp" line="60" pragmaType="interface" parentfunction="matmulBlock_wrapper" mode="m_axi" port="mcxx_memport" bundle="" offset="" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="matmulBlock/matmulBlock_hls_automatic_clang.cpp" line="74" pragmaType="protocol" parentfunction="matmulBlock_wrapper" mode="fixed"/>
+<pragma file="matmulBlock/matmulBlock_hls_automatic_clang.cpp" line="144" pragmaType="protocol" parentfunction="matmulBlock_wrapper" mode="fixed"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_id_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<128>* operator+<ap_uint<128>, 64, false>(ap_uint<128>*, ap_int_base<64, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_dest_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_keep_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_strb_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_user_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_last_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_data_ptr" off="0" region="0" recursive="0"/>
+<pragma file="matmulBlock/matmulBlock_hls_automatic_clang.cpp" line="49" pragmaType="inline" parentfunction="mcxx_write_out_port" off="0" region="0" recursive="0"/>
+<pragma file="matmulBlock/matmulBlock_hls_automatic_clang.cpp" line="35" pragmaType="inline" parentfunction="matmulBlock" off="1" region="0" recursive="0"/>
+<pragma file="matmulBlock/matmulBlock_hls_automatic_clang.cpp" line="41" pragmaType="pipeline" parentfunction="matmulBlock" off="0" ii="2" rewind="0" style=""/>
+<pragma file="matmulBlock/matmulBlock_hls_automatic_clang.cpp" line="36" pragmaType="array_partition" parentfunction="matmulBlock" dim="1" factor="2" mode="cyclic" dynamic="0" variable="a"/>
+<pragma file="matmulBlock/matmulBlock_hls_automatic_clang.cpp" line="37" pragmaType="array_partition" parentfunction="matmulBlock" dim="1" factor="16" mode="cyclic" dynamic="0" variable="b"/>
+<pragma file="matmulBlock/matmulBlock_hls_automatic_clang.cpp" line="38" pragmaType="array_partition" parentfunction="matmulBlock" dim="1" factor="32" mode="cyclic" dynamic="0" variable="c"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi1ELb0EEC2EDq1_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, false>::RType<64, false>::div operator/<64, false, 64, false>(ap_int_base<64, false> const&, ap_int_base<64, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<64>::ap_uint<64, false>(ap_int_base<64, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_bit_ref<8, false>::ap_bit_ref(ap_int_base<8, false>*, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::ap_int_base<64, false>(ap_range_ref<64, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="ssdm_int<64, false>::ssdm_int(unsigned long)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<128, false>::ap_int_base(unsigned long long)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<2, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi2ELb0EEC2EDq2_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<64>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<2>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<1>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<128, false>::operator()(int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::operator[](int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_bit_ref<8, false>::operator bool() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, false>::RType<($_0)64, false>::div operator/<64, false>(ap_int_base<64, false> const&, unsigned long)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<128, false>::ap_range_ref(ap_int_base<128, false>*, int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="to_int64" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, false>::ap_int_base(unsigned long)" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="ssdm_int<128, false>::ssdm_int(unsigned __int128)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="to_uint64" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<128, false>::operator=(unsigned long long)" off="0" region="0" recursive="0"/>
+</pragmas>

@@ -1,0 +1,28 @@
+    "matmulBlock": {
+        "full_path" : "/tmp/fpga-934a6a/matmulBlock_hls_automatic_clang.cpp",
+        "filename" : "matmulBlock_hls_automatic_clang.cpp",
+        "name" : "matmulBlock",
+        "type" : 6945317266,
+        "num_instances" : 1,
+        "task_creation" : false,
+        "instrumentation" : false,
+        "periodic" : false,
+        "lock" : false,
+        "deps" : false,
+        "ompif" : false,
+        "imp" : false
+    },
+    "matmulFPGA": {
+        "full_path" : "/tmp/fpga-934a6a/matmulFPGA_hls_automatic_clang.cpp",
+        "filename" : "matmulFPGA_hls_automatic_clang.cpp",
+        "name" : "matmulFPGA",
+        "type" : 5839957875,
+        "num_instances" : 1,
+        "task_creation" : true,
+        "instrumentation" : false,
+        "periodic" : false,
+        "lock" : false,
+        "deps" : true,
+        "ompif" : false,
+        "imp" : false
+    },
